@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Frontend portfolio Menno Veerkamp" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, VUE.js, UI, UX" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script defer src="scripts/script.js"></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/logo.svg"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/logo-light.svg"
+      media="(prefers-color-scheme: light)"
+    />
+    <title>Menno Veerkamp</title>
+  </head>
+  <body>
+    <div class="overlay">
+      <img src="assets/logo.svg" alt="logo" />
+    </div>
+    <header>
+      <nav>
+        <a href="/" class="main-logo"
+          ><img src="assets/logo.svg" alt="logo"
+        /></a>
+        <ul>
+          <section class="links">
+            <li class="main-link about active">
+              <a href="#about" onclick="openCloseMenu()">About</a>
+            </li>
+            <li class="main-link skills">
+              <a href="#skills" onclick="openCloseMenu()">Skills</a>
+            </li>
+            <li class="main-link projects">
+              <a href="#projects" onclick="openCloseMenu()">Projects</a>
+            </li>
+            <li class="hamburger-menu-icon">
+              <a
+                href="https://www.linkedin.com/in/menno-veerkamp-3205b0258/"
+                target="_blank"
+                onclick="openCloseMenu()"
+                ><img src="assets/linkedin.svg" alt="linkedin icon"
+              /></a>
+            </li>
+            <li class="hamburger-menu-icon">
+              <a
+                href="https://github.com/MennoVK"
+                target="_blank"
+                onclick="openCloseMenu()"
+                ><img src="assets/github.png" alt="github icon"
+              /></a>
+            </li>
+            <li class="hamburger-menu-icon email-link">
+              <a href="mailto:contact@mennoveerkamp.com"
+                ><img src="assets/email.png" alt="email icon"
+              /></a>
+            </li>
+          </section>
+        </ul>
+        <section class="hamburger" onclick="openCloseMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </section>
+      </nav>
+    </header>
+    <div class="blur"></div>
+    <div class="blur"></div>
+    <div class="bg"></div>
+    <p class="email">contact@mennoveerkamp.com</p>
+    <article class="content">
+      <article id="about" class="about page">
+        <section class="text">
+          <h1>Menno Veerkamp</h1>
+          <h3>Frontend developer</h3>
+          <p>
+            I am currently 19 years old and studying computer science at the
+            university of applied sciences Leiden. Although i specialize in
+            UI/UX design, i still love learning about pretty much all aspects of
+            computer science.
+          </p>
+        </section>
+      </article>
+      <article id="skills" class="skills page">
+        <section class="text">
+          <section class="skill">
+            <h3>HTML</h3>
+            <div class="bar">
+              <div class="hand html"></div>
+            </div>
+          </section>
+          <section class="skill">
+            <h3>CSS</h3>
+            <div class="bar">
+              <div class="hand css"></div>
+            </div>
+          </section>
+          <section class="skill">
+            <h3>JS</h3>
+            <div class="bar">
+              <div class="hand js"></div>
+            </div>
+          </section>
+          <section class="skill">
+            <h3>VUEJS</h3>
+            <div class="bar">
+              <div class="hand vuejs"></div>
+            </div>
+          </section>
+          <section class="skill">
+            <h3>PHP</h3>
+            <div class="bar">
+              <div class="hand php"></div>
+            </div>
+          </section>
+          <section class="skill">
+            <h3>PYTHON</h3>
+            <div class="bar">
+              <div class="hand python"></div>
+            </div>
+          </section>
+          <section class="skill">
+            <h3>SQL</h3>
+            <div class="bar">
+              <div class="hand sql"></div>
+            </div>
+          </section>
+          <section class="skill">
+            <h3>GIT</h3>
+            <div class="bar">
+              <div class="hand git"></div>
+            </div>
+          </section>
+        </section>
+      </article>
+      <article id="projects" class="projects page">
+        <section class="text">
+          <section class="arrow leftarrow">
+            <img
+              src="assets/arrowleft.svg"
+              alt="arrowleft"
+              onclick="carousel(0)"
+            />
+          </section>
+          <section class="carousel-content firstitem">
+            <section class="header slide">
+              <h3>UDEMY DARK MODE</h3>
+              <section class="info">
+                <h4>HTML &bull; SCSS &bull; JS &bull; GIT</h4>
+                <h4 class="year">2023</h4>
+              </section>
+            </section>
+            <section class="carousel">
+              <img
+                src="assets/udemy.webp"
+                alt="udemy"
+                class="image"
+                onclick="window.open('https://chrome.google.com/webstore/detail/udemy-dark-theme/mnloceeicbhfhinjcnfieonmpindkmpb?hl=nl')"
+              />
+            </section>
+            <section class="caption slide">
+              <p>
+                To create a better viewing experience on udemy i created a dark
+                mode chrome extension. In the process i worked with someone else
+                which mainly gave me the oppertunity to practise and get better
+                at git.
+              </p>
+            </section>
+          </section>
+          <section class="carousel-content seconditem">
+            <section class="header slide">
+              <h3>STRANGER THINGS WEBSITE</h3>
+              <section class="info">
+                <h4>HTML &bull; CSS &bull; JS</h4>
+                <h4 class="year">2022</h4>
+              </section>
+            </section>
+            <section class="carousel">
+              <img
+                src="assets/stwebsite.webp"
+                alt="stranger things website"
+                class="image"
+                onclick="window.open('https://eindwebsite-iwder.web.app/')"
+              />
+            </section>
+            <section class="caption slide">
+              <p>
+                For this project i created a website in stranger things theme to
+                expand my html, css and javascript knowledge.
+              </p>
+            </section>
+          </section>
+          <section class="carousel-content thirditem">
+            <section class="header slide">
+              <h3>TODO LIST APP</h3>
+              <section class="info">
+                <h4>HTML &bull; CSS &bull; VUE.JS</h4>
+                <h4 class="year">2022</h4>
+              </section>
+            </section>
+            <section class="carousel">
+              <img
+                src="assets/todowebsite.webp"
+                alt="todolist"
+                class="image"
+                onclick="window.open('https://todoapp-b51e4.web.app/')"
+              />
+            </section>
+            <section class="caption slide">
+              <p>
+                The first big framework i learned was VUE. To get a good
+                understanding of the framework i built an app that lets you
+                create an infinite amount of to do lists.
+              </p>
+            </section>
+          </section>
+          <section class="arrow rightarrow">
+            <img
+              src="assets/arrowright.svg"
+              alt="arrowright"
+              onclick="carousel(1)"
+            />
+          </section>
+        </section>
+      </article>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap')
+
+$base-color: #101010
+$accent-color: #046df7
+
+.bg
+    background: radial-gradient(ellipse at 45% 0%, $accent-color 0%, transparent 40%), radial-gradient(circle at 65% 40%, $accent-color 0%, rgba(16,16,16,1) 20%)
+    background-repeat: no-repeat
+    background-position: center
+    height: 100vh
+    width: 100vw
+    position: fixed
+    z-index: -1
+    
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+html 
+    scroll-behavior: smooth
+    font-family: 'Poppins', serif
+    color: white
+    line-height: 1
+    overflow-x: hidden
+    scrollbar-color: #292929 $base-color
+
+body
+    overflow-x: hidden
+    
+body::-webkit-scrollbar 
+    background: $base-color
+body::-webkit-scrollbar-thumb 
+    background: #292929
+    border-radius: 10rem
+    border: 2px solid $base-color
+
+header
+    z-index: 1
+    position: fixed
+    display: flex
+    justify-content: center
+    width: 100vw
+    height: 4rem
+    nav
+        width: 90%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        
+        .main-logo
+            padding: 2rem 0
+            opacity: 0
+            animation: appear 0.5s ease-out 2.5s forwards
+            
+            img
+                width: 35px
+                aspect-ratio: 1
+        ul
+            display: none
+                    
+        .hamburger-fullscreen
+            display: block
+            
+            .links
+                animation: slideleft 0.2s ease-out
+                display: flex
+                flex-direction: column
+                align-items: center
+                background: $base-color
+                position: fixed
+                justify-content: center
+                font-size: 2rem
+                left: 0
+                top: 0
+                width: 100vw
+                height: 100vh
+
+                li
+                    margin: 1rem 0
+                    list-style-type: none
+                    text-align: center
+                    
+                    a
+                        cursor: pointer
+                        font-weight: 300
+                        color: white
+                        text-decoration: none
+                    img
+                        width: 30px  
+                .active 
+                    > a
+                        font-weight: 600
+        .hamburger
+            z-index: 5
+            opacity: 0
+            animation: appear 0.3s ease-out 3.7s forwards
+            div
+                width: 30px
+                height: 3px
+                background: white !important
+                margin: 7.5px 0
+                border-radius: 5px
+                transition: 0.3s ease-in-out
+            div:nth-child(1) 
+                transform-origin: left center
+            div:nth-child(2) 
+                transform-origin: left center
+            div:nth-child(3)
+                transform-origin: left center
+        .open div:nth-child(1)
+            transform: rotate(45deg)
+        .open div:nth-child(2)
+            width: 0%
+            opacity: 0
+        .open div:nth-child(3) 
+            transform: rotate(-45deg)
+            
+.content
+    max-width: 1000px
+    width: 90vw
+    margin: 0 auto
+
+.page
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+.text
+    animation: border 0.4s ease-in-out 3.5s forwards
+    padding-left: 1rem
+    border-left: 5px solid $accent-color
+    border-radius: 10rem
+    opacity: 0
+
+.about
+    h1
+        display: table-caption
+        font-weight: 600
+        font-size: 2.5rem
+        opacity: 0
+        transform: translateX(50px)
+        animation: slideleft 1s 3.9s forwards
+    h3
+        font-weight: 300
+        font-size: 1.3rem
+        color: $accent-color
+        margin: 0.5rem 0
+        opacity: 0
+        transform: translateX(50px)
+        animation: slideleft 1s 4.1s forwards
+    p
+        font-size: 0.7rem
+        font-weight: 300
+        opacity: 0
+        transform: translateX(50px)
+        animation: slideleft 1s 4.3s forwards
+
+.skills
+    .text
+        .skill
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+            .bar
+                width: 60%
+                height: 4px
+                background: white !important
+                display: flex 
+                align-items: center
+        
+                .hand
+                    width: 5px
+                    height: 30px
+                    background-color: $accent-color
+                    border-radius: 40px
+                .html
+                    margin-left: 90%
+                .css
+                    margin-left: 95%
+                .js
+                    margin-left: 90%
+                .vuejs
+                    margin-left: 85%
+                .php
+                    margin-left: 70%
+                .python
+                    margin-left: 80%
+                .sql
+                    margin-left: 80%
+                .git
+                    margin-left: 70%      
+        .skill:not(:last-child)  
+            margin-bottom: 1rem  
+        h3
+            margin: 0.2rem 0
+            font-weight: 600
+            font-size: 1.2rem
+ 
+.projects
+    .firstitem
+        display: block
+    .seconditem
+        display: none
+    .thirditem
+        display: none
+    .text
+        position: relative
+        display: flex
+        justify-content: space-between
+        align-items: center
+        section
+            img
+                cursor: pointer
+        .arrow
+            z-index: 3
+            position: absolute
+            opacity: 0
+            img
+                width: 30px
+        .rightarrow
+            right: 0        
+        .carousel-content
+            .header
+                display: flex
+                flex-direction: column
+
+                h3
+                    font-weight: 600
+                    font-size: 1.3rem
+                h4
+                    font-weight: 300
+                    font-size: 0.8rem
+                .info
+                    display: flex
+                    
+                    .year
+                        color: $accent-color
+                        margin-left: 1rem
+            .carousel
+                img
+                    max-width: 100%
+                    margin: 1rem 0
+                    transition: opacity 0.2s
+                img:hover
+                    opacity: 0.7
+            p
+                font-size: 0.6rem
+
+.overlay
+    width: 100vw
+    height: 100vh
+    z-index: 2
+    background: $base-color
+    position: fixed
+    display: flex
+    justify-content: center
+    align-items: center
+    pointer-events: all
+    animation: dissolve 0.5s ease-in 2s forwards
+    img
+        animation: circle 2s forwards
+        width: 20%
+        max-width: 150px
+
+.email
+    cursor: pointer
+    display: none
+    position: fixed
+    left: 5%
+    bottom: 1rem
+    writing-mode: vertical-rl
+    transform: rotate(180deg)
+    font-size: 1rem
+    opacity: 0
+    animation: appear 0.3s ease-out 5s forwards
+
+.email:hover
+    color: #ffffff96
+
+.blur
+    width: 100vw
+    height: 100vh
+    position: fixed
+    backdrop-filter: blur(100px)
+    filter: blur(0)
+
+@media screen and (min-width: 400px) 
+    header
+        nav
+            .main-logo
+                img
+                    width: 50px
+    .about
+        h1
+            font-size: 3.5rem
+        h3
+            font-size: 2rem
+        p
+            font-size: 1rem
+    .skills
+        .text
+            h3
+                margin: 0.2rem 0
+                font-size: 2rem
+    .projects
+        .text
+            .carousel-content
+                .header
+                    h3
+                        font-size: 2rem
+                    h4
+                        font-size: 1.3rem
+                p
+                    font-size: 1rem
+
+@media screen and (min-width: 575px) 
+    .about
+        h1
+            font-size: 5rem
+        h3
+            font-size: 3rem
+        p
+            font-size: 1.5rem
+    .skills
+        .text
+            h3
+                font-size: 2.5rem
+    .projects
+        .text
+            .arrow
+                img
+                    width: 35px
+            .carousel-content
+                .header
+                    h3
+                        font-size: 2.5rem
+                    h4
+                        font-size: 1.4rem
+                p
+                    font-size: 1.2rem
+
+@media screen and (min-width: 800px) 
+    header
+        z-index: 1
+        position: fixed
+        display: flex
+        justify-content: center
+        width: 100vw
+        nav
+            width: 90%
+            display: flex
+            justify-content: space-between
+            align-items: center
+            
+            .main-logo
+                padding: 2rem 0
+                animation: appear 0.5s ease-out 2.5s forwards
+                
+                img
+                    width: 60px
+                    aspect-ratio: 1
+            ul
+                display: block
+                .links
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    font-size: 1.5rem
+                    .main-link
+                        transform: translateY(-30px)
+                        opacity: 0
+                    .main-link:first-of-type
+                        animation: slidedown 1s ease-in-out 2.5s forwards
+                    .main-link:nth-of-type(2)
+                        animation: slidedown 1s ease-in-out 2.6s forwards
+                    .main-link:nth-of-type(3)
+                        animation: slidedown 1s ease-in-out 2.7s forwards
+                    .hamburger-menu-icon
+                        opacity: 0
+                        animation: appear 0.3s ease-out 3.7s forwards
+                    .email-link
+                        display: none
+                    li
+                        padding: 0 1rem
+                        list-style-type: none
+                        text-align: center
+                        
+                        a
+                            cursor: pointer
+                            color: white
+                            text-decoration: none
+                        img
+                            width: 30px  
+                    .active 
+                        > a
+                            font-weight: 600
+            .hamburger
+                display: none
+
+@media screen and (min-width: 1200px) 
+    .email
+        display: block
+    
+@media screen and (min-width: 1200px) 
+    header
+        height: 8rem
+        nav
+            .main-logo
+                img
+                    width: 70px
+            ul                
+                .links
+                    font-size: 2rem
+
+                    li
+                        padding: 0 2rem
+
+                        img
+                            width: 40px  
+    .text
+        padding-left: 2rem
+    .about
+        h1
+            font-size: 8rem
+        h3
+            font-size: 3.7rem
+        p
+            font-size: 1.5rem
+    .skills
+        .text
+            h3
+                font-size: 3rem
+    .projects
+        .text
+            .carousel-content
+                .header
+                    h3
+                        font-size: 3rem
+                    h4
+                        font-size: 1.6rem
+                p
+                    font-size: 1.2rem
+
+@media screen and (min-width: 1600px) 
+    .text
+        padding-left: 3rem
+    .about
+        h1
+            font-size: 10rem
+        h3
+            font-size: 4rem
+        p
+            font-size: 2rem
+    .skills
+        .text
+            h3
+                font-size: 3rem
+    .projects
+        .text
+            .arrow
+                img
+                    width: 50px
+            .carousel-content
+                .header
+                    h3
+                        font-size: 3rem
+                    h4
+                        font-size: 1.6rem
+                p
+                    font-size: 1.2rem
+
+@media screen and (min-width: 2200px) 
+    .about
+        h1
+            font-size: 12rem
+        h3
+            font-size: 5rem
+        p
+            font-size: 2rem
+    .skills
+        .text
+            h3
+                font-size: 4rem
+            .skill
+                .bar
+                    height: 5px           
+                    .hand
+                        width: 6px
+                        height: 40px
+    .projects
+        .text
+            .arrow
+                img
+                    width: 60px
+            .carousel-content
+                .header
+                    h3
+                        font-size: 5rem
+                    h4
+                        font-size: 2rem
+                p
+                    font-size: 1.5rem
+
+.dissolve
+    animation: dissolve 0.1s ease-in forwards
+
+.appear
+    animation: appear 0.2s ease-out forwards
+
+.slideleft
+    animation: slideleft 1s ease forwards
+
+.handanimation
+    animation: handanimation 1s reverse
+
+.zoom 
+    transform: scale(0.8)
+    animation: zoom 1s ease forwards
+    
+.arrowleft
+    opacity: 0
+    transform: translateX(15px)
+    animation: arrowleft 0.25s ease-in-out 1s forwards
+
+.arrowright
+    opacity: 0
+    transform: translateX(-15px)
+    animation: arrowright 0.25s ease-in-out 1s forwards
+
+@keyframes border
+    from 
+        opacity: 0
+        border-radius: 20rem
+    to
+        opacity: 1
+        border-radius: 0rem
+
+@keyframes zoom
+    from 
+        transform: scale(0.8)
+    to
+        transform: scale(1)
+
+@keyframes slidedown 
+  from 
+    opacity: 0
+    transform: translateY(-30px)
+  to
+    opacity: 1
+    transform: translateY(0px)
+
+@keyframes slideleft
+  from 
+    opacity: 0
+    transform: translateX(50px)
+  to
+    opacity: 1
+    transform: translateX(0px)
+
+@keyframes dissolve
+  from 
+    opacity: 1
+  to
+    opacity: 0
+
+@keyframes appear
+  from 
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes circle 
+    0% 
+        clip-path: circle(0%) 
+    50%
+        clip-path: circle(75%)
+    75%
+        opacity: 1
+    100% 
+        opacity: 0
+
+@keyframes handanimation 
+  to 
+    margin-left: 0
+
+@keyframes arrowleft
+  from 
+    opacity: 0
+    transform: translateX(15px)
+  to
+    opacity: 1
+    transform: translateX(0px)
+
+@keyframes arrowright
+  from 
+    opacity: 0
+    transform: translateX(-15px)
+  to
+    opacity: 1
+    transform: translateX(0px)
