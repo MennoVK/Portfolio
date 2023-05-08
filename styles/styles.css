@@ -205,19 +205,16 @@ header nav .open div:nth-child(3) {
   margin-left: 90%;
 }
 .skills .text .skill .bar .vuejs {
-  margin-left: 85%;
+  margin-left: 80%;
 }
-.skills .text .skill .bar .php {
+.skills .text .skill .bar .laravel {
+  margin-left: 75%;
+}
+.skills .text .skill .bar .react {
   margin-left: 70%;
-}
-.skills .text .skill .bar .python {
-  margin-left: 80%;
-}
-.skills .text .skill .bar .sql {
-  margin-left: 80%;
 }
 .skills .text .skill .bar .git {
-  margin-left: 70%;
+  margin-left: 75%;
 }
 .skills .text .skill:not(:last-child) {
   margin-bottom: 1rem;
