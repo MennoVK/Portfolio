@@ -1,0 +1,12 @@
+{
+    "extends": "next/core-web-vitals",
+    "plugins": ["simple-import-sort", "import-newlines"],
+    "rules": {
+        "indent": ["error", 4],
+        "quotes": ["error", "double"],
+        "jsx-quotes": ["error", "prefer-double"],
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error",
+        "import/newline-after-import": ["error", { "count": 2 }]
+    }   
+}

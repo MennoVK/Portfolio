@@ -1,0 +1,21 @@
+{
+    "explorer.compactFolders": false,
+    "editor.tabSize": 4,
+    "css.validate": false,
+    "[css]": {
+        "editor.tabSize": 2
+    },
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.detectIndentation": false,
+    "editor.codeActionsOnSave": ["source.addMissingImports", "source.fixAll.eslint"],
+    "files.exclude": {
+        "**/node_modules/**": true,
+        ".next": true,
+    },
+    "eslint.workingDirectories": [
+        {
+            "mode": "auto"
+        }
+    ]
+}
