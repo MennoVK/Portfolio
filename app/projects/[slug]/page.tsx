@@ -15,8 +15,8 @@ export interface PageProps {
 
 export interface ProjectProps {
     title: string;
-    description: string; 
-    images: imageType[]
+    description?: string; 
+    images?: imageType[]
 }
 
 export default function Project({ params }: PageProps) {

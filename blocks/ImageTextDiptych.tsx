@@ -7,8 +7,8 @@ import { imageType } from "@/misc/types/types";
 
 export interface ImageTextDiptychProps {
     title: string;
-    description: string;
-    images: imageType[]
+    description?: string;
+    images?: imageType[]
 }
 
 export const ImageTextDiptych = ({title, description, images}: ImageTextDiptychProps) => {
