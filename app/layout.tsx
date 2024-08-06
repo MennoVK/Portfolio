@@ -11,11 +11,6 @@ import { Lenis } from "@/components/Lenis"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata: Metadata = {
-    title: "Coming soon",
-    description: "Coming soon page for Menno Veerkamp's portfolio",
-}
-
 export default function RootLayout({
     children,
 }: {
@@ -35,4 +30,16 @@ export default function RootLayout({
             </html>
         </Lenis>
     )
+}
+
+export const metadata: Metadata = {
+    title: "Coming soon",
+    description: "Coming soon page for Menno Veerkamp's portfolio",
+    openGraph: {
+        siteName: "Menno Veerkamp",
+        title: "Coming soon",
+        description: "Coming soon page for Menno Veerkamp's portfolio",
+        url: "https://mennoveerkamp.com",
+        images: [""]
+    },
 }
