@@ -26,7 +26,9 @@
     "typescript": "5.5.4"
   },
   "devDependencies": {
+    "@vercel/speed-insights": "^1.0.12",
     "eslint-plugin-import-newlines": "^1.4.0",
-    "eslint-plugin-simple-import-sort": "^12.1.1"
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "i": "^0.3.7"
   }
 }
