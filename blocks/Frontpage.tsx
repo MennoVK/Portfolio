@@ -13,6 +13,7 @@ export const Frontpage = () => {
                         alt="arrow down"
                         width={16}
                         height={9}
+                        priority
                         className="inline mx-10 align-baseline"/>
                 </p>
             </div>

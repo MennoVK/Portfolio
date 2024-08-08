@@ -49,6 +49,7 @@ export const ImageTextDiptych = ({title, description, images, aspects, year}: Im
                         alt={images[0].alt}
                         width={695}
                         height={753}
+                        priority
                         className="object-cover w-full h-[calc(100vh-20px)]" />
                 </div>
             }
