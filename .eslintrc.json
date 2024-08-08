@@ -7,6 +7,8 @@
         "jsx-quotes": ["error", "prefer-double"],
         "simple-import-sort/imports": "error",
         "simple-import-sort/exports": "error",
-        "import/newline-after-import": ["error", { "count": 2 }]
+        "import/newline-after-import": ["error", { "count": 2 }],
+        "react/jsx-max-props-per-line": ["error", { "maximum": 1 }],
+        "react/jsx-first-prop-new-line": "error"
     }   
 }
