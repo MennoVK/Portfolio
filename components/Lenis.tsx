@@ -10,7 +10,9 @@ interface LenisProps {
 
 export const Lenis = ({ children }: LenisProps) => {
     return (
-        <ReactLenis root options={{ lerp: 0.1, duration: 0.5 }}>
+        <ReactLenis
+            root
+            options={{ lerp: 0.1, duration: 0.5 }}>
             {children}
         </ReactLenis>
     );

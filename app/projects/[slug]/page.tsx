@@ -4,21 +4,12 @@ import { FullscreenImage } from "@/blocks/FullscreenImage";
 import { ImageDiptych } from "@/blocks/ImageDiptych";
 import { ImageTextDiptych } from "@/blocks/ImageTextDiptych";
 import { projects } from "@/misc/content";
-import { imageType } from "@/misc/types/types";
 
 
 export interface PageProps {
     params: { 
         slug: string 
     };
-}
-
-export interface ProjectProps {
-    title: string;
-    aspects?: string;
-    year?: number;
-    description?: string; 
-    images?: imageType[]
 }
 
 export default function Project({ params }: PageProps) {
@@ -28,15 +19,20 @@ export default function Project({ params }: PageProps) {
         notFound();
     }
 
-    const { title, aspects, year, description, images }: ProjectProps = props;
+    const { title, aspects, year, description, images } = props;
 
     return (
         <>
-            <ImageTextDiptych title={title} aspects={aspects} year={year} description={description} images={images} />
-            {images?.[1] && 
+            <ImageTextDiptych
+                title={title}
+                aspects={aspects}
+                year={year}
+                description={description} 
+                images={images} />
+            {images && images?.length > 1 && 
                 <FullscreenImage images={images}  />
             }
-            {images?.[2] && images?.[3] &&
+            {images && images?.length > 3 &&
                 <ImageDiptych images={images}  />
             }
         </>
