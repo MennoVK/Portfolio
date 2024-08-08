@@ -15,6 +15,8 @@ export interface PageProps {
 
 export interface ProjectProps {
     title: string;
+    aspects?: string;
+    year?: number;
     description?: string; 
     images?: imageType[]
 }
@@ -26,11 +28,11 @@ export default function Project({ params }: PageProps) {
         notFound();
     }
 
-    const { title, description, images }: ProjectProps = props;
+    const { title, aspects, year, description, images }: ProjectProps = props;
 
     return (
         <>
-            <ImageTextDiptych title={title} description={description} images={images} />
+            <ImageTextDiptych title={title} aspects={aspects} year={year} description={description} images={images} />
             {images?.[1] && 
                 <FullscreenImage images={images}  />
             }
