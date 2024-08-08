@@ -41,3 +41,8 @@ export const experience = [
     {work: "student assistent - Hogeschool Leiden", year: "2022-23"},
     {work: "Internship frontend development - Numbered studio", year: "2023-24"},
 ]
+
+export const socials = [
+    {platform: "LinkedIn", url: "https://www.linkedin.com/in/menno-veerkamp-3205b0258/"},
+    {platform: "GitHub", url: "https://www.github.com/mennoVK"},
+]

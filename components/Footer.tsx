@@ -1,5 +1,7 @@
 import Link from "next/link"
 
+import { socials } from "@/misc/content"
+
 
 export const Footer = () => {
     return (
@@ -7,14 +9,13 @@ export const Footer = () => {
             <div className="flex justify-between">
                 <p className="text-12 text-white/50">Contact me</p>
                 <div className="flex flex-col gap-12 text-right">
-                    <Link
-                        target="_blank"
-                        className="text-12"
-                        href={"https://www.linkedin.com/in/menno-veerkamp-3205b0258/"}>LinkedIn</Link>
-                    <Link
-                        target="_blank"
-                        className="text-12"
-                        href={"https://github.com/MennoVK"} >GitHub</Link>
+                    {socials.map((social, idx) => (
+                        <Link
+                            key={idx}
+                            target="_blank"
+                            className="text-12"
+                            href={social.url}>{social.platform}</Link>
+                    ))}
                 </div>
             </div>
             <Link
