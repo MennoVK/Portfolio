@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 
 import { FullscreenImage } from "@/blocks/FullscreenImage";
-import { ImageProjectsDiptych } from "@/blocks/ImageProjectsDiptych";
+import { ImageDiptych } from "@/blocks/ImageDiptych";
 import { ImageTextDiptych } from "@/blocks/ImageTextDiptych";
 import { projects } from "@/misc/content";
 
@@ -33,7 +33,7 @@ export default function Project({ params }: PageProps) {
                 <FullscreenImage images={images}  />
             }
             {images && images?.length > 3 &&
-                <ImageProjectsDiptych images={images}  />
+                <ImageDiptych images={images}  />
             }
         </>
     )

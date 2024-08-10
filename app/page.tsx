@@ -1,12 +1,12 @@
 import { Frontpage } from "@/blocks/Frontpage";
-import { Projects } from "@/blocks/Projects";
+import { ImageProjectsDiptych } from "@/blocks/ImageProjectsDiptych";
 
 
 export default function Home() {
     return (
         <>
             <Frontpage />
-            <Projects />
+            <ImageProjectsDiptych />
         </>
     )
 }
