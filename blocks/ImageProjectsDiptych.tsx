@@ -3,11 +3,11 @@ import Image from "next/image"
 import { imageType } from "@/misc/types/types"
 
 
-export interface ImageDiptychProps {
+export interface ImageProjectsDiptychProps {
     images: imageType[]
 }
 
-export const ImageDiptych = ({images}: ImageDiptychProps) => {
+export const ImageProjectsDiptych = ({images}: ImageProjectsDiptychProps) => {
     return (
         <section className="flex h-screen gap-10 mx-20 my-10">
             <div className="flex-grow basis-0">
