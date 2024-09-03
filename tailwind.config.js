@@ -26,6 +26,7 @@ module.exports = {
     ],
     theme: {
         colors: {
+            current: "currentColor",
             white: "#ffffff",
             "tundora-grey": "#4B4A4A",
             black: "#121212",
