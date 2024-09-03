@@ -1,6 +1,6 @@
 import Image from "next/image"
-import Link from "next/link"
 
+import { CustomLink } from "@/components/CustomLink";
 import { imageType } from "@/misc/types/types";
 
 
@@ -16,9 +16,10 @@ export const ImageTextDiptych = ({title, description, images, aspects, year}: Im
     return (
         <section className="flex gap-10 pt-10 mx-20 mb-10">
             <div className="flex flex-col justify-between flex-grow basis-0 max-w-[50%]">
-                <Link
+                <CustomLink
                     href="/"
-                    className="uppercase text-12 text-white/50">Back to home</Link>
+                    className="uppercase text-12 text-white/50"
+                    underline>Back to home</CustomLink>
                 <div className="flex flex-col w-3/4 gap-24 pb-30">
                     {title && 
                         <h1 className="capitalize text-50">{title}</h1>

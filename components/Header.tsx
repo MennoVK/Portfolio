@@ -2,11 +2,12 @@
 
 import clsx from "clsx";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import { tv } from "tailwind-variants";
 
 import { bio,experience, skills } from "@/misc/content"
+
+import { CustomLink } from "./CustomLink";
 
 
 const button = tv({
@@ -25,9 +26,9 @@ export const Header = () => {
 
     return (
         <header className="fixed z-10 flex justify-between w-full gap-10 p-20">
-            <Link
+            <CustomLink
                 className={clsx(button({ rounded: "tl" }), "flex items-center justify-center !text-36 h-fit")}
-                href="/">Menno<br></br> Veerkamp</Link>
+                href="/">Menno<br></br> Veerkamp</CustomLink>
             <button
                 className={clsx(button({rounded: "br"}), active && "h-fit bg-black")}
                 onClick={() => {setActive(!active)}}>
@@ -77,7 +78,7 @@ export const Header = () => {
                     </div>
                 }
             </button>
-            <Link
+            <CustomLink
                 className={clsx(button({ rounded: "tlbr" }), "flex items-center justify-center  h-fit")}
                 href="mailto:contact@mennoveerkamp.com"
                 target="_blank">
@@ -88,7 +89,7 @@ export const Header = () => {
                     width={11}
                     height={11}
                     className="inline mx-10 align-baseline"/>
-            </Link>
+            </CustomLink>
         </header>
     )
 }

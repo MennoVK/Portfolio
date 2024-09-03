@@ -2,6 +2,7 @@ import clsx from "clsx"
 import Image from "next/image"
 import Link from "next/link"
 
+import { CustomLink } from "@/components/CustomLink"
 import { projects } from "@/misc/content"
 
 
@@ -21,7 +22,7 @@ export const ImageProjectsDiptych = () => {
                 <p className="text-30">Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page</p>
                 <div className="w-full uppercase">
                     {projects.map((project, idx) => (
-                        <Link
+                        <CustomLink
                             key={idx}
                             className={clsx("flex justify-between w-full border-b border-tundora-grey", idx === 0 && "border-t")}
                             href={`/projects/${(project.title).replaceAll(" ", "-")}`}>
@@ -29,7 +30,7 @@ export const ImageProjectsDiptych = () => {
                             <p className="w-1/2 py-20 text-12">{project.title}</p>
                             <p className="py-20 text-center text-12">{project.aspects}</p>
                             <p className="py-20 text-right text-12">{project.year}</p>
-                        </Link>
+                        </CustomLink>
                     ))}
                 </div>
             </div>

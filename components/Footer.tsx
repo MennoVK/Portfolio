@@ -2,26 +2,34 @@ import Link from "next/link"
 
 import { socials } from "@/misc/content"
 
+import { CustomLink } from "./CustomLink"
+
 
 export const Footer = () => {
     return (
         <footer className="flex flex-col p-20 uppercase gap-60">
             <div className="flex justify-between">
                 <p className="text-12 text-white/50">Contact me</p>
-                <div className="flex flex-col gap-12 text-right">
+                <div className="flex flex-col items-end gap-12">
                     {socials.map((social, idx) => (
-                        <Link
+                        <CustomLink
                             key={idx}
+                            underline
                             target="_blank"
                             className="text-12"
-                            href={social.url}>{social.platform}</Link>
+                            href={social.url}>{social.platform}</CustomLink>
+                        
                     ))}
                 </div>
             </div>
-            <Link
+            <CustomLink
                 target="_blank"
-                className="underline text-[5.1vw] md:text-[5.4vw] xl:text-[5.55vw] text-center overflow-hidden"
-                href={"mailto:contact@mennoveerkamp.com"}>contact@mennoveerkamp.com</Link>
+                className="text-[5.1vw] md:text-[5.4vw] xl:text-[5.55vw] text-center overflow-hidden leading-none"
+                href={"mailto:contact@mennoveerkamp.com"}
+                underline
+                active
+                animated={false}
+            >contact@mennoveerkamp.com</CustomLink>
         </footer>
     )
 }
