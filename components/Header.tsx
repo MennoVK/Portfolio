@@ -11,7 +11,7 @@ import { CustomLink } from "./CustomLink";
 
 
 const button = tv({
-    base: "flex-grow text-center uppercase border border-white/40 basis-0 aspect-[20/7] text-12 px-10",
+    base: "flex-grow text-center uppercase border border-white/40 basis-0 aspect-[20/7] text-12 px-10  backdrop-blur-sm hover:backdrop-blur-lg transition-all duration-200",
     variants: {
         rounded: {
             tl: "rounded-tl-lg",
