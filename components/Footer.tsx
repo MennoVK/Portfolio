@@ -28,7 +28,6 @@ export const Footer = () => {
                 href={"mailto:contact@mennoveerkamp.com"}
                 underline
                 active
-                animated={false}
             >contact@mennoveerkamp.com</CustomLink>
         </footer>
     )

@@ -19,17 +19,16 @@ export interface CustomLinkprops extends LinkProps {
     target?: "_blank" | "_self" | "_parent" | "_top",
     underline?: boolean
     active?: boolean;
-    animated?: boolean;
     className: string,
     children: ReactNode;
 }
 
-export const CustomLink = ({href, target, underline, active, animated, className, children}: CustomLinkprops) => {
+export const CustomLink = ({href, target, underline, active, className, children}: CustomLinkprops) => {
     return (
         <Link
             href={href}
             target={target}
-            className={clsx(className, linkStyles({underline, active, animated: false}))}>
+            className={clsx(className, linkStyles({underline, active}))}>
             {children}
         </Link>
     )
