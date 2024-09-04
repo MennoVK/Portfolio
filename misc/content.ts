@@ -9,7 +9,8 @@ export const projects = [
             {file: "rectangle1.png", alt: "testalt"},
             {file: "square1.png", alt: "testalt"},
             {file: "square1.png", alt: "testalt"},
-        ]
+        ],
+        link: "https://arthur-bruyere.com",
     },
     {
         title: "Project", 

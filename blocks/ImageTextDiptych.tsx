@@ -7,12 +7,13 @@ import { imageType } from "@/misc/types/types";
 export interface ImageTextDiptychProps {
     title: string;
     description?: string;
-    images?: imageType[]
     aspects? : string
     year?: number
+    images?: imageType[],
+    link?: string,
 }
 
-export const ImageTextDiptych = ({title, description, images, aspects, year}: ImageTextDiptychProps) => {
+export const ImageTextDiptych = ({title, description, aspects, year, images, link}: ImageTextDiptychProps) => {
     return (
         <section className="flex gap-10 pt-10 mx-20 mb-10">
             <div className="flex flex-col justify-between flex-grow basis-0 max-w-[50%]">
@@ -27,7 +28,6 @@ export const ImageTextDiptych = ({title, description, images, aspects, year}: Im
                     <table className="w-full uppercase border-collapse">
                         <tbody>
                             <tr className="w-full border-y border-tundora-grey">
-                                {/* on mouseover change shader/image, on click go to project */}
                                 <td className="py-20 text-12">Project</td>
                                 {aspects &&
                                 <td className="py-20 text-center text-12">{aspects}</td>
