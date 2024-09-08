@@ -12,7 +12,8 @@ export const projects = [
             {file: "1project2.png", alt: "testalt"},
             {file: "1project1.png", alt: "testalt"},
             {file: "1project1.png", alt: "testalt"},
-        ]
+        ],
+        link: "https://arthur-bruyere.com",
     },
     {
         title: "Project", 
