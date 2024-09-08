@@ -1,14 +1,17 @@
+import age from "./age"
+
+
 export const projects = [
     {
-        title: "arthur bruyere portfolio", 
+        title: "Arthur Bruyere portfolio", 
         description: "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page", 
         aspects: "dev", 
         year: 2024, 
         images: [
-            {file: "square1.png", alt: "testalt"},
-            {file: "rectangle1.png", alt: "testalt"},
-            {file: "square1.png", alt: "testalt"},
-            {file: "square1.png", alt: "testalt"},
+            {file: "1project1.png", alt: "testalt"},
+            {file: "1project2.png", alt: "testalt"},
+            {file: "1project1.png", alt: "testalt"},
+            {file: "1project1.png", alt: "testalt"},
         ]
     },
     {
@@ -23,7 +26,7 @@ export const projects = [
     },
 ]
 
-export const bio = "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page"
+export const bio = `Hi! I'm Menno Veerkamp. ${age} years old`
 
 export const skills = [
     "html",
@@ -46,3 +49,5 @@ export const socials = [
     {platform: "LinkedIn", url: "https://www.linkedin.com/in/menno-veerkamp-3205b0258/"},
     {platform: "GitHub", url: "https://www.github.com/mennoVK"},
 ]
+
+export const email = "Contact@mennoveerkamp.com"
