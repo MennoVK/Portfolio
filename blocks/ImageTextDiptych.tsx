@@ -15,22 +15,21 @@ export interface ImageTextDiptychProps {
 
 export const ImageTextDiptych = ({title, description, aspects, year, images, link}: ImageTextDiptychProps) => {
     return (
-        <section className="flex gap-10 pt-10 mx-20 mb-10">
-            <div className="flex flex-col justify-between flex-grow basis-0 max-w-[50%]">
+        <section className="gap-10 mx-20 mb-10 sm:flex">
+            <div className="flex flex-col justify-between flex-grow basis-0 w-full sm:max-w-[50%]">
                 <CustomLink
                     href="/"
                     className="uppercase text-12 text-white/50"
                     underline>Back to home</CustomLink>
-                <div className="flex flex-col w-3/4 gap-24 pb-30">
+                <div className="flex flex-col gap-24 py-48 sm:py-24 sm:w-3/4">
                     {title && 
                         <h1 className="capitalize text-50">{title}</h1>
                     }
                     <table className="w-full uppercase border-collapse">
                         <tbody>
                             <tr className="w-full border-y border-tundora-grey">
-                                <td className="py-20 text-12">Project</td>
                                 {aspects &&
-                                <td className="py-20 text-center text-12">{aspects}</td>
+                                <td className="py-20 text-left text-12">{aspects}</td>
                                 }
                                 {year &&
                                     <td className="py-20 text-right text-12">{year}</td>
@@ -40,6 +39,13 @@ export const ImageTextDiptych = ({title, description, aspects, year, images, lin
                     </table>
                     {description &&
                         <p className="text-20">{description}</p>
+                    }
+                    {link && 
+                        <CustomLink
+                            href={link}
+                            className="uppercase"
+                            underline
+                            active>See project</CustomLink>
                     }
                 </div>
             </div>

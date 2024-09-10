@@ -19,15 +19,17 @@ export default function Project({ params }: PageProps) {
         notFound();
     }
 
-    const { title, aspects, year, description, images } = props;
+    const { title, aspects, year, description, link, images } = props;
 
     return (
         <>
+            <div className="h-[10vh] sm:h-[15vh] bg-black block w-full relative"></div>
             <ImageTextDiptych
                 title={title}
                 aspects={aspects}
                 year={year}
                 description={description} 
+                link={link}
                 images={images} />
             {images && images?.length > 1 && 
                 <FullscreenImage images={images}  />
