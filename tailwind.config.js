@@ -4,7 +4,7 @@ const spacing = new Array(450).fill(null).reduce((result, item, i) => {
 }, {})
 
 const SIZES = [
-    12, 20, 30, 36, 50, 65, 66
+    12, 20, 28, 30, 36, 50, 60, 65, 66, 90
 ];
 
 const max = (px) => {
@@ -27,9 +27,10 @@ module.exports = {
     theme: {
         colors: {
             current: "currentColor",
-            white: "#ffffff",
-            "tundora-grey": "#4B4A4A",
             black: "#121212",
+            grey: "#C1B8B8",
+            "tundora-grey": "#4B4A4A",
+            white: "#ffffff",
             red: "#ff0000",
         },
         borderRadius: {
@@ -37,9 +38,7 @@ module.exports = {
         },
         spacing,
         fontSize,
-        extend: {
-            
-        },
+        extend: {},
     },
     plugins: [],
 }
