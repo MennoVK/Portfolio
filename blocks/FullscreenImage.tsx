@@ -15,7 +15,7 @@ export const FullscreenImage = ({images}: FullscreenImageProps) => {
                 alt={images[1].alt}
                 width={1440}
                 height={788}
-                className="object-cover w-full h-full px-20 my-10" />
+                className="object-cover w-full h-full px-10 my-10 sm:px-20" />
         </section>
     )
 }
