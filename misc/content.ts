@@ -26,9 +26,6 @@ export const projects = [
         ],
         link: "https://todoapp-b51e4.web.app/"
     },
-    {
-        title: "test",
-    },
 ]
 
 export const bio = `Hi! I'm Menno Veerkamp. ${age} years old`
