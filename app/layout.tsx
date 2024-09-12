@@ -33,12 +33,12 @@ export default function RootLayout({
 }
 
 export const metadata: Metadata = {
-    title: "Coming soon",
-    description: "Coming soon page for Menno Veerkamp's portfolio",
+    title: "Menno Veerkamp",
+    description: "Menno Veerkamp portfolio page",
     openGraph: {
         siteName: "Menno Veerkamp",
-        title: "Coming soon",
-        description: "Coming soon page for Menno Veerkamp's portfolio",
+        title: "Menno Veerkamp",
+        description: "Menno Veerkamp portfolio page",
         url: "https://mennoveerkamp.com",
         images: [""]
     },
