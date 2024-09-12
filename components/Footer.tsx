@@ -7,7 +7,7 @@ import { CustomLink } from "./CustomLink"
 
 export const Footer = () => {
     return (
-        <footer className="flex flex-col p-10 uppercase sm:p-20">
+        <footer className="flex flex-col p-10 overflow-hidden uppercase sm:p-20">
             <div className="flex justify-between">
                 <p className="text-12 text-white/50">Contact me</p>
                 <div className="flex flex-col items-end gap-12">
@@ -25,7 +25,7 @@ export const Footer = () => {
             </div>
             <CustomLink
                 target="_blank"
-                className="text-[5.1vw] md:text-[5.4vw] xl:text-[5.55vw] text-center overflow-hidden leading-none"
+                className="text-[5.1vw] md:text-[5.4vw] xl:text-[5.55vw] text-center leading-none"
                 href={`mailto:${email}`}
                 underline
                 active
