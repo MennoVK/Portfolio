@@ -17,7 +17,6 @@ const button = tv({
     variants: {
         rounded: {
             tl: "sm:rounded-tl-lg rounded-tl-md rounded-br-md sm:rounded-br-[0px]",
-            tr: "sm:rounded-tr-lg rounded-tr-md",
             br: "sm:rounded-br-lg rounded-tr-md sm:rounded-tr-[0px]",
             tlbr: "sm:rounded-tl-lg rounded-br-md sm:rounded-br-lg",
         },
@@ -63,7 +62,9 @@ export const Header = () => {
                     onClick={() => {setSideBarOpen(!sideBarOpen)}}
                     className={clsx(button({rounded: "br"}), "uppercase delay-100 w-1/6 sm:w-auto", !isVisible && "sm:-translate-y-[150%]", !sideBarOpen && !isVisible && "-translate-y-[150%]")}>
                     <span className="hidden sm:inline-block">About me</span>
-                    <div className={clsx(sideBarOpen && "after:-rotate-0 before:rotate-180", "inline-block align-baseline relative w-10 h-10 before:content-[''] before:block before:bg-grey before:absolute before:top-2/4 before:left-0 before:w-full before:h-1 after:content-[''] after:block after:bg-grey after:absolute after:top-2/4 after:left-0 after:duration-700 before:duration-700 after:w-full after:h-1 before:-translate-y-1/2 after:-translate-y-1/2 after:rotate-90 p-5 mx-10")} />
+                    <div
+                        className={clsx(sideBarOpen && "after:-rotate-0 before:rotate-180", "inline-block align-baseline relative w-10 h-10 before:content-[''] before:block before:bg-grey before:absolute before:top-2/4 before:left-0 before:w-full before:h-1 after:content-[''] after:block after:bg-grey after:absolute after:top-2/4 after:left-0 after:duration-700 before:duration-700 after:w-full after:h-1 before:-translate-y-1/2 after:-translate-y-1/2 after:rotate-90 p-5 mx-10")}
+                        aria-label="plus" />
                 </button>
                 <CustomLink
                     className={clsx(button({ rounded: "tlbr" }), "items-center hidden sm:flex justify-center transition-transform duration-300 delay-200 uppercase", !isVisible && "-translate-y-[150%]")}
