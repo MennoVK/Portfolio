@@ -22,7 +22,8 @@ export const Frontpage = () => {
                 alt="home"
                 width={1440}
                 height={900}
-                className="object-cover w-full h-full" />
+                className="object-cover w-full h-full"
+                unoptimized />
         </section>
     )
 }

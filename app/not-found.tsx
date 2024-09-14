@@ -20,7 +20,8 @@ export default function NotFound() {
                 alt="home"
                 width={1440}
                 height={900}
-                className="object-cover w-full h-screen" />
+                className="object-cover w-full h-screen"
+                unoptimized />
         </>
     );
 }
