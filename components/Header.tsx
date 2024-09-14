@@ -63,7 +63,7 @@ export const Header = () => {
                     className={clsx(button({rounded: "br"}), "uppercase delay-100 w-1/6 sm:w-auto", !isVisible && "sm:-translate-y-[150%]", !sideBarOpen && !isVisible && "-translate-y-[150%]")}>
                     <span className="hidden sm:inline-block">About me</span>
                     <div
-                        className={clsx(sideBarOpen && "after:-rotate-0 before:rotate-180", "inline-block align-baseline relative w-10 h-10 before:content-[''] before:block before:bg-grey before:absolute before:top-2/4 before:left-0 before:w-full before:h-1 after:content-[''] after:block after:bg-grey after:absolute after:top-2/4 after:left-0 after:duration-700 before:duration-700 after:w-full after:h-1 before:-translate-y-1/2 after:-translate-y-1/2 after:rotate-90 p-5 mx-10")}
+                        className={clsx(sideBarOpen && "after:!rotate-0 before:!rotate-180", "inline-block align-baseline relative w-10 h-10 before:content-[''] before:block before:bg-grey before:absolute before:top-2/4 before:left-0 before:w-full before:h-1 after:content-[''] after:block after:bg-grey after:absolute after:top-2/4 after:left-0 after:duration-700 before:duration-700 after:w-full after:h-1 before:-translate-y-1/2 after:-translate-y-1/2 after:rotate-90 p-5 mx-10")}
                         aria-label="plus" />
                 </button>
                 <CustomLink
