@@ -7,7 +7,7 @@ import { error } from "@/misc/content";
 export default function NotFound() {
     return (
         <>
-            <div className="absolute flex flex-col items-center justify-center w-full h-screen gap-12 uppercase">
+            <div className="absolute flex flex-col items-center justify-center w-full h-full gap-12 uppercase">
                 <h1 className="text-60 sm:text-90">{error.title}</h1>
                 <CustomLink
                     href="/"
@@ -20,7 +20,7 @@ export default function NotFound() {
                 alt="home"
                 width={1440}
                 height={900}
-                className="object-cover w-full h-screen"
+                className="object-cover w-full h-[100svh]"
                 unoptimized />
         </>
     );
