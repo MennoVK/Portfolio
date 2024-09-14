@@ -25,7 +25,7 @@ export const Footer = () => {
             </div>
             <CustomLink
                 target="_blank"
-                className="text-[5.1vw] md:text-[5.4vw] xl:text-[5.55vw] text-center leading-none"
+                className="text-[5.1vw] md:text-[5.4vw] xl:text-[5.55vw] text-center leading-tight sm:leading-none"
                 href={`mailto:${email}`}
                 underline
                 active
