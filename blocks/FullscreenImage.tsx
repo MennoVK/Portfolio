@@ -9,7 +9,7 @@ export interface FullscreenImageProps {
 
 export const FullscreenImage = ({images}: FullscreenImageProps) => {
     return (
-        <section className="w-full h-[calc(100vh-20px)]">
+        <section className="w-full sm:h-[calc(100vh-20px)]">
             <Image
                 src={`/projects/${images[1].file}`}
                 alt={images[1].alt}

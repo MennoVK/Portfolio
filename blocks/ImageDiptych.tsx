@@ -9,14 +9,14 @@ export interface ImageDiptychProps {
 
 export const ImageDiptych = ({images}: ImageDiptychProps) => {
     return (
-        <section className="flex h-screen gap-10 mx-20 my-10">
+        <section className="flex gap-10 mx-10 my-10 sm:h-screen sm:mx-20">
             <div className="flex-grow basis-0">
                 <Image
                     src={`/projects/${images[2].file}`}
                     alt={images[2].alt}
                     width={695}
                     height={753}
-                    className="object-cover w-full h-[calc(100vh-20px)]" />
+                    className="object-cover w-full sm:h-[calc(100vh-20px)] aspect-square sm:aspect-auto" />
             </div>
             <div className="flex-grow basis-0">
                 <Image
@@ -24,7 +24,7 @@ export const ImageDiptych = ({images}: ImageDiptychProps) => {
                     alt={images[3].alt}
                     width={695}
                     height={753}
-                    className="object-cover w-full h-[calc(100vh-20px)]" />
+                    className="object-cover w-full sm:h-[calc(100vh-20px)] aspect-square sm:aspect-auto" />
             </div>
         </section>
     )
