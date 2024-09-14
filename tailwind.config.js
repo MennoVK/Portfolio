@@ -34,11 +34,26 @@ module.exports = {
             red: "#ff0000",
         },
         borderRadius: {
+            md: "25px",
             lg: "30px",
         },
         spacing,
         fontSize,
-        extend: {},
+        extend: {
+            animation: {
+                "custom-bounce": "custom-bounce 1s ease-in-out infinite",
+            },
+            keyframes: {
+                "custom-bounce": {
+                    "0%, 100%": {
+                        transform: "translateY(-20%)",
+                    },
+                    "50%": {
+                        transform: "translateY(20%)",
+                    }
+                }
+            },
+        },
     },
     plugins: [],
 }

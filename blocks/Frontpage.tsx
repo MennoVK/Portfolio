@@ -14,7 +14,7 @@ export const Frontpage = () => {
                         width={16}
                         height={9}
                         priority
-                        className="inline mx-10 align-baseline"/>
+                        className="inline mx-10 align-baseline animate-custom-bounce"/>
                 </p>
             </div>
             <Image
