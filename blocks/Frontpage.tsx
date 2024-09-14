@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export const Frontpage = () => {
     return (
-        <section className="w-full h-screen">
+        <section className="w-full h-[100dvh]">
             <div className="absolute h-full p-10 sm:p-20">
                 <h1 className="relative -translate-y-1/2 sm:w-3/4 text-28 sm:text-50 top-1/2">Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page</h1>
                 <p className="absolute uppercase bottom-20 text-12">
