@@ -24,7 +24,7 @@ export default function Project({ params }: PageProps) {
 
     return (
         <>
-            <div className="h-[10vh] sm:h-[15vh] bg-black block w-full relative"></div>
+            <div className="h-[10vh] sm:h-[15vh] bg-black block w-full relative" />
             <ImageTextDiptych
                 title={title}
                 aspects={aspects}
