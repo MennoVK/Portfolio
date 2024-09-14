@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
     "@studio-freight/react-lenis": "^0.0.47",
@@ -26,6 +27,7 @@
     "typescript": "5.5.4"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^14.2.5",
     "@vercel/speed-insights": "^1.0.12",
     "eslint-plugin-import-newlines": "^1.4.0",
     "eslint-plugin-react": "^7.35.0",
