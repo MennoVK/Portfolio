@@ -7,10 +7,10 @@ import { tv } from "tailwind-variants";
 export const linkStyles = tv({
     variants: {
         underline: {
-            true: "after:scale-x-100 relative inline-block w-fit after:transition-transform after:absolute after:w-full after:h-1 after:bg-current after:bottom-0 after:left-0 sm:after:hover:scale-x-100 sm:after:scale-x-0 after:origin-bottom-right sm:after:hover:origin-bottom-left",
+            true: "after:scale-x-100 relative inline-block w-max after:transition-transform after:absolute after:w-full after:h-1 after:bg-current after:bottom-0 after:left-0 after:hover:scale-x-100 sm:after:scale-x-0 after:origin-bottom-right after:hover:origin-bottom-left",
         },
         active: {
-            true: "after:!scale-x-100 sm:after:hover:scale-x-0 after:origin-bottom-left sm:after:hover:origin-bottom-right" ,
+            true: "sm:after:scale-x-100 sm:after:hover:scale-x-0 after:origin-bottom-left after:hover:origin-bottom-right" ,
         },
     },
 });
