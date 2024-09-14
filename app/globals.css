@@ -14,9 +14,14 @@
   }
 }
 
+html{
+  height:100%;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
+  height:100%;
   overflow-y: scroll;
 }
 

@@ -15,27 +15,29 @@ export interface SideBarProps {
 export const SideBar = ({ sideBarOpen, setSideBarOpen }: SideBarProps) => {
     return (
         <div
-            className={clsx(sideBarOpen && "bg-black/50 pointer-events-auto", "pointer-events-none fixed top-0 left-0 flex justify-end w-full h-screen sm:z-10 z-[5]")}
+            className={clsx(sideBarOpen && "bg-black/50 pointer-events-auto", "pointer-events-none fixed top-0 left-0 flex justify-end w-full h-screen sm:z-50 z-[10] touch-none")}
             onClick={() => {setSideBarOpen(false)}}>
             <section
-                className={clsx(!sideBarOpen && "translate-x-full", "w-full sm:w-1/3 h-screen px-10 bg-black transition-transform pt-[10vh] sm:pt-0 relative")}
+                className={clsx(!sideBarOpen && "translate-x-full", "w-full sm:w-1/3 h-screen px-10 bg-black transition-transform ease-out duration-700 pt-[10vh] sm:pt-0 relative z-20")}
                 onClick={(e) => e.stopPropagation()}>
                 <button
-                    className="absolute top-0 right-0 p-10"
+                    className="absolute top-0 right-0 hidden p-10 sm:block"
                     onClick={() => {setSideBarOpen(false)}}>
                     <Image
                         src="/svgs/plus.svg"
                         alt="plus"
                         width={11}
                         height={11}
-                        className="hidden rotate-45 sm:block"/>
+                        className="rotate-45"/>
                 </button>
                 <div className="grid gap-48 py-24 mt-0 sm:py-48 sm:mt-36">
                     <div className="flex flex-col order-1 gap-24 uppercase sm:order-3">
-                        <h1 className="text-white/50">Contact me</h1>
+                        <h1 className=" text-white/50">Contact me</h1>
                         <CustomLink
                             href={`mailto:${email}`}
-                            className="flex justify-between">
+                            className="flex justify-between"
+                            target="_blank"
+                        >
                             {email}
                             <Image
                                 src={"/svgs/arrow-right.svg"}
@@ -61,7 +63,7 @@ export const SideBar = ({ sideBarOpen, setSideBarOpen }: SideBarProps) => {
                     </div>
 
                     <div className="flex flex-col order-3 gap-24 uppercase sm:order-2">
-                        <h6 className="text-white/50">Skills</h6>
+                        <h1 className="text-white/50">Skills</h1>
                         <div className="flex flex-wrap gap-12">
                             {skills.map((skill, idx) => (
                                 <p key={idx}>{skill}</p>

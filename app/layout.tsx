@@ -4,9 +4,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 
-import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
-import { Lenis } from "@/components/Lenis"
+import { SmoothScroll } from "@/components/SmoothScroll"
 
 
 const inter = Inter({ subsets: ["latin"] })
@@ -17,17 +16,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
     return (
-        <Lenis>
-            <html lang="en">
-                <body className={inter.className}>
-                    <main>
-                        <Header />
-                        {children}
-                        <SpeedInsights />
-                    </main>
-                </body>
-            </html>
-        </Lenis>
+        <html lang="en">
+            <body className={inter.className}>
+                <main>
+                    <Header />
+                    {children}
+                    <SpeedInsights />
+                    {/* <SmoothScroll /> */}
+                </main>
+            </body>
+        </html>
     )
 }
 
