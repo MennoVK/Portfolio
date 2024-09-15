@@ -1,6 +1,8 @@
 import {age} from "./time"
 
 
+export const projectsTitle = "To practise my skills i've done some personal and school related projects. Below are the most important ones."
+
 export const projects = [
     {
         title: "Arthur Bruyere portfolio", 
@@ -28,11 +30,11 @@ export const projects = [
     },
 ]
 
-export const bio = `Hi! I'm Menno Veerkamp. ${age} years old`
+export const bio = `Hi! I'm Menno Veerkamp. A ${age} year old frontend developer from The Netherlands.`
 
 export const skills = [
     "html",
-    "CSS/Sass",
+    "(s)css",
     "Javascript",
     "React",
     "Nextjs",
@@ -43,8 +45,8 @@ export const skills = [
 ]
 
 export const experience = [
-    {work: "student assistent - Hogeschool Leiden", year: "2022-23", description: "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page"},
-    {work: "Internship frontend development - Numbered studio", year: "2023-24", description: "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page"},
+    {work: "student assistent - Hogeschool Leiden", year: "2022-23", description: "As a student assistent my job was to assist teachers in helping first year students with their work. I was also available to share my personal school experiences and helped setting up learning environments."},
+    {work: "Internship frontend development - Numbered studio", year: "2023-24", description: "During my internship at Numbered i learned to work in a team on projects for big clients. This included working with modern web development techniques and focussing on performance, accesibility and SEO."},
 ]
 
 export const socials = [
