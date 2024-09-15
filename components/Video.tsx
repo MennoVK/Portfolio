@@ -5,11 +5,14 @@ export interface VideoProps {
     loop?: boolean;
     muted?: boolean;
     playsInline?: boolean;
-    width?: number;
-    height?: number;
+    width: number;
+    height: number;
+    className?: string;
+    poster?: string;
+    preload?: "metadata" | "auto" | "none";
 }
 
-export const Video = ({src, controls, muted, loop, autoplay, playsInline, width, height}: VideoProps) => {
+export const Video = ({src, controls, muted, loop, autoplay, playsInline, width, height, preload, poster, className}: VideoProps) => {
     return (
         <video
             width={width}
@@ -19,7 +22,9 @@ export const Video = ({src, controls, muted, loop, autoplay, playsInline, width,
             autoPlay={autoplay}
             playsInline={playsInline}
             loop={loop}
-            preload="none">
+            preload={preload}
+            className={className}
+            poster={poster}>
             <source
                 src={src}
                 type="video/mp4" />
