@@ -13,7 +13,7 @@ import { SmoothScroll } from "./SmoothScroll";
 
 
 const button = tv({
-    base: "sm:flex-grow text-center border border-white/40 sm:basis-0 text-12 px-10 backdrop-blur-sm sm:hover:backdrop-blur-lg transition-all duration-200",
+    base: "sm:flex-grow text-center border border-white/40 sm:basis-0 text-12 px-10 backdrop-blur-sm sm:hover:backdrop-blur-lg transition-all duration-300",
     variants: {
         rounded: {
             tl: "sm:rounded-tl-lg rounded-tl-md rounded-br-md sm:rounded-br-[0px]",
@@ -56,7 +56,7 @@ export const Header = () => {
                 className={clsx(!isVisible && "sm:pointer-events-none", "fixed z-20 flex justify-between w-full gap-10 p-10 sm:p-20 sm:h-[15%] h-[10%]")}
                 ref={ref}>
                 <CustomLink
-                    className={clsx(button({ rounded: "tl" }), "w-10/12 sm:w-auto flex items-center justify-center text-20 sm:text-30 transition-transform duration-300", !isVisible && "sm:-translate-y-[150%]", !sideBarOpen && !isVisible && "-translate-y-[150%]" )}
+                    className={clsx(button({ rounded: "tl" }), "w-10/12 sm:w-auto flex items-center justify-center text-20 sm:text-30", !isVisible && "sm:-translate-y-[150%]", !sideBarOpen && !isVisible && "-translate-y-[150%]" )}
                     href="/">Menno Veerkamp</CustomLink>
                 <button
                     onClick={() => {setSideBarOpen(!sideBarOpen)}}
@@ -67,7 +67,7 @@ export const Header = () => {
                         aria-label="plus" />
                 </button>
                 <CustomLink
-                    className={clsx(button({ rounded: "tlbr" }), "items-center hidden sm:flex justify-center transition-transform duration-300 delay-200 uppercase", !isVisible && "-translate-y-[150%]")}
+                    className={clsx(button({ rounded: "tlbr" }), "items-center hidden sm:flex justify-center delay-200 uppercase", !isVisible && "-translate-y-[150%]")}
                     href={`mailto:${email}`}
                     target="_blank">
                     {email}
@@ -75,7 +75,7 @@ export const Header = () => {
                         src="/svgs/arrow-right.svg"
                         alt="arrow right"
                         width={18}
-                        height={18}
+                        height={11}
                         className="inline mx-5 align-baseline"/>
                 </CustomLink>
             </header>
