@@ -43,7 +43,7 @@ export const ImageTextDiptych = ({title, description, aspects, year, images, lin
                     {link && 
                             <CustomLink
                                 href={link}
-                                className="uppercase"
+                                className="uppercase text-nowrap"
                                 underline
                                 target="_blank"
                                 active>See project</CustomLink>
