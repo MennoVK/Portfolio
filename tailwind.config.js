@@ -4,7 +4,7 @@ const spacing = new Array(450).fill(null).reduce((result, item, i) => {
 }, {})
 
 const SIZES = [
-    12, 20, 28, 30, 36, 50, 60, 65, 66, 90
+    12, 20, 25, 28, 30, 36, 50, 60, 65, 66, 90
 ];
 
 const max = (px) => {
@@ -53,6 +53,9 @@ module.exports = {
                     }
                 }
             },
+            screens: {
+                "mdlg": "840px",
+            }
         },
     },
     plugins: [],

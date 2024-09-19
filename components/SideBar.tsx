@@ -15,11 +15,14 @@ export interface SideBarProps {
 export const SideBar = ({ sideBarOpen, setSideBarOpen }: SideBarProps) => {
     return (
         <div
-            className={clsx(sideBarOpen && "bg-black/50 pointer-events-auto", "pointer-events-none fixed top-0 left-0 flex justify-end w-full h-svh sm:z-50 z-[10] touch-none")}
-            onClick={() => {setSideBarOpen(false)}}>
+            className={clsx(sideBarOpen && "bg-black/50 pointer-events-auto", "pointer-events-none fixed top-0 left-0 flex justify-end w-full h-svh sm:z-50 z-10")}
+            onClick={() => {setSideBarOpen(false)}}
+            data-lenis-prevent
+        >
             <section
-                className={clsx(!sideBarOpen && "translate-x-full", "w-full sm:w-1/3 h-full px-10 bg-black transition-transform ease-out duration-700 pt-[10vh] sm:pt-0 relative z-20")}
+                className={clsx(!sideBarOpen && "translate-x-full", "w-full sm:w-1/2 mdlg:w-1/3 h-full px-10 bg-black transition-transform ease-out duration-700 pt-[10vh] sm:pt-0 relative z-20 overflow-y-auto overflow-x-hidden")}
                 onClick={(e) => e.stopPropagation()}>
+                <div className="bg-black w-full h-[10%] z-10 fixed top-0 left-0 sm:hidden" />
                 <button
                     className="absolute top-0 right-0 hidden p-10 sm:block"
                     onClick={() => {setSideBarOpen(false)}}>
