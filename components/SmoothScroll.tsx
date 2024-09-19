@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 
 
 export interface SmoothScrollProps {
-    stop: boolean;
+    stop?: boolean;
 }
 
 export const SmoothScroll = ({stop}: SmoothScrollProps) => {
