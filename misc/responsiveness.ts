@@ -1,3 +1,6 @@
 export const isMobile = () => {
-    return (window.innerWidth <= 640)
+    if (typeof window === "undefined") {
+        return false;
+    }
+    return window.innerWidth <= 640
 }
