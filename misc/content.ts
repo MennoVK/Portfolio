@@ -1,12 +1,12 @@
 import {age} from "./time"
 
 
-export const projectsTitle = "To practise my skills i've done some personal and school related projects. Below are the most important ones."
+export const projectsTitle = "To practise my skills I've done some personal and school related projects. Below are the most important ones."
 
 export const projects = [
     {
         title: "Todo app", 
-        description: "For a school project i chose to learn VueJS. To prove my knowledge i built this Todo list app and hosted it with firebase.", 
+        description: "For a school project I chose to learn VueJS. To prove my knowledge I built this Todo list app and hosted it with firebase.", 
         aspects: "dev",
         year: 2023, 
         images: [
@@ -47,7 +47,7 @@ export const skills = [
 
 export const experience = [
     {work: "student assistent - Hogeschool Leiden", year: "2022-23", description: "As a student assistent my job was to assist teachers in helping first year students with their work. I was also available to share my personal school experiences and helped setting up learning environments."},
-    {work: "Internship frontend development - Numbered studio", year: "2023-24", description: "During my internship at Numbered i learned to work in a team on projects for big clients. This included working with modern web development techniques and focussing on performance, accesibility and SEO."},
+    {work: "Internship frontend development - Numbered studio", year: "2023-24", description: "During my internship at Numbered I learned to work in a team on projects for big clients. This included working with modern web development techniques and focussing on performance, accessibility and SEO."},
 ]
 
 export const socials = [
