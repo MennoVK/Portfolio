@@ -1,4 +1,4 @@
-import { Frontpage } from "@/blocks/Frontpage";
+import { Hero } from "@/blocks/Hero";
 import { ImageProjectsDiptych } from "@/blocks/ImageProjectsDiptych";
 import { Footer } from "@/components/Footer";
 
@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 export default function Home() {
     return (
         <>
-            <Frontpage />
+            <Hero />
             <ImageProjectsDiptych />
             <Footer />
         </>
