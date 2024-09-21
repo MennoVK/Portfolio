@@ -2,13 +2,15 @@ import "./globals.css"
 
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Manrope } from "next/font/google"
 
 import { Header } from "@/components/Header"
-import { SmoothScroll } from "@/components/SmoothScroll"
 
 
-const inter = Inter({ subsets: ["latin"] })
+const manrope = Manrope({
+    subsets: ["latin"],
+    weight: "400",
+})
 
 export default function RootLayout({
     children,
@@ -17,12 +19,11 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={inter.className}>
+            <body className={manrope.className}>
                 <main>
                     <Header />
                     {children}
                     <SpeedInsights />
-                    {/* <SmoothScroll /> */}
                 </main>
             </body>
         </html>

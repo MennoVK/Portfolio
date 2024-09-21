@@ -25,11 +25,15 @@ export const Footer = () => {
             </div>
             <CustomLink
                 target="_blank"
-                className="text-[5.1vw] md:text-[5.4vw] xl:text-[5.55vw] text-center leading-tight sm:leading-none"
+                className="text-[5.7vw] sm:text-[5.75vw] md:text-[5.8vw] lg:text-[5.875vw] xl:text-[5.9vw] 2xl:text-[5.95vw] text-center leading-tight sm:leading-none flex justify-between w-full"
                 href={`mailto:${email}`}
                 underline
                 active
-            >{email}</CustomLink>
+            >
+                <span>Contact</span>
+                <span className="leading-none sm:leading-[0.85]">@</span>
+                <span>MennoVeerkamp.com</span>
+            </CustomLink>
         </footer>
     )
 }
