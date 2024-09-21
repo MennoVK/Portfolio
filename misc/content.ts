@@ -5,29 +5,30 @@ export const projectsTitle = "To practise my skills i've done some personal and 
 
 export const projects = [
     {
-        title: "Arthur Bruyere portfolio", 
-        description: "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page", 
-        aspects: "dev", 
-        year: 2024, 
-        images: [
-            {file: "1project1.png", alt: "testalt"},
-            {file: "1project2.png", alt: "testalt"},
-            {file: "1project1.png", alt: "testalt"},
-            {file: "1project1.png", alt: "testalt"},
-        ],
-        link: "https://arthur-bruyere.com",
-    },
-    {
         title: "Todo app", 
         description: "For a school project i chose to learn VueJS. To prove my knowledge i built this Todo list app and hosted it with firebase.", 
         aspects: "dev",
         year: 2023, 
         images: [
-            {file: "2project1.png", alt: "testalt"},
-            {file: "2project2.png", alt: "testalt"},
+            {file: "todo-mobile.png", alt: "testalt"},
+            {file: "todo-desktop.png", alt: "testalt"},
         ],
         link: "https://todoapp-b51e4.web.app/"
     },
+    {
+        title: "Arthur Bruyere portfolio", 
+        description: "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page", 
+        aspects: "dev", 
+        year: 2024, 
+        images: [
+            {file: "2project1.png", alt: "testalt"},
+            {file: "2project2.png", alt: "testalt"},
+            {file: "2project1.png", alt: "testalt"},
+            {file: "2project1.png", alt: "testalt"},
+        ],
+        link: "https://arthur-bruyere.com",
+    },
+    
 ]
 
 export const bio = `Hi! I'm Menno Veerkamp. A ${age} year old frontend developer from The Netherlands.`
