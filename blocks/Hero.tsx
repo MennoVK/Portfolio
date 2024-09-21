@@ -1,6 +1,5 @@
 import Image from "next/image"
 
-import { Video } from "@/components/Video"
 import { bio } from "@/misc/content"
 
 
@@ -20,25 +19,13 @@ export const Hero = () => {
                         className="inline mx-10 align-baseline animate-custom-bounce"/>
                 </p>
             </div>
-            {/* <Image
+            <Image
                 src="/shader.gif"
                 alt="home"
                 width={1440}
                 height={900}
                 className="object-cover w-full h-full"
-                unoptimized /> */}
-            <Video
-                src={"./videos/trapezoids.mp4"}
-                width={3840}
-                height={2160}
-                autoplay
-                loop
-                muted
-                playsInline
-                className="object-cover w-full h-full"
-                preload="auto" 
-                poster="./videos/1.png"
-            />
+                unoptimized />
         </section>
     )
 }
