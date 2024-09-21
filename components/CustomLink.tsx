@@ -19,17 +19,21 @@ export interface CustomLinkprops extends LinkProps {
     target?: "_blank" | "_self" | "_parent" | "_top",
     underline?: boolean
     active?: boolean;
+    prefetch?: boolean;
     className?: string,
     children?: ReactNode;
     onMouseEnter?: () => void;
     onMouseLeave?: () => void;
+    onClick?: () => void;
 }
 
-export const CustomLink = ({href, target, onMouseEnter, onMouseLeave, underline, active, className, children}: CustomLinkprops) => {
+export const CustomLink = ({href, target, prefetch = false, onClick, onMouseEnter, onMouseLeave, className, underline, active, children}: CustomLinkprops) => {
     return (
         <Link
             href={href}
             target={target}
+            prefetch={prefetch}
+            onClick={onClick}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
             className={clsx(className, linkStyles({underline, active}))}>
