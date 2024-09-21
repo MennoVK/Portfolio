@@ -53,11 +53,12 @@ export const Header = () => {
         <>
             <SmoothScroll stop={sideBarOpen} />
             <header
-                className={clsx(!isVisible && "mdlg:pointer-events-none", sideBarOpen && "sm:overflow-x-hidden sm:overflow-y-scroll", "fixed z-20 flex justify-between w-full gap-10 p-10 sm:p-20 mdlg:h-[15%] h-[10%]")}
+                className={clsx(!isVisible && "mdlg:pointer-events-none", sideBarOpen && "sm:overflow-x-hidden sm:overflow-y-scroll", "header fixed z-20 flex justify-between w-full gap-10 p-10 sm:p-20 ")}
                 ref={ref}>
                 <CustomLink
                     className={clsx(button({ rounded: "tl" }), "w-10/12 mdlg:w-auto flex items-center justify-center text-20 mdlg:text-25 lg:text-30", !isVisible && "mdlg:-translate-y-[150%]", !sideBarOpen && !isVisible && "-translate-y-[150%]" )}
-                    href="/">Menno Veerkamp</CustomLink>
+                    href="/"
+                    onClick={() => setSideBarOpen(false)}>Menno Veerkamp</CustomLink>
                 <button
                     onClick={() => {setSideBarOpen(!sideBarOpen)}}
                     className={clsx(button({rounded: "br"}), "uppercase delay-100 w-1/6 mdlg:w-auto", !isVisible && "mdlg:-translate-y-[150%]", !sideBarOpen && !isVisible && "-translate-y-[150%]")}>

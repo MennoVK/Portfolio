@@ -19,9 +19,9 @@ export const SideBar = ({ sideBarOpen, setSideBarOpen }: SideBarProps) => {
             onClick={() => {setSideBarOpen(false)}}
             data-lenis-prevent
         >
-            <div className={clsx(!sideBarOpen && "translate-x-full", "bg-black w-full h-[10%] fixed top-0 left-0 sm:hidden transition-transform ease-out duration-700 z-30")} />
+            <div className={clsx(!sideBarOpen && "translate-x-full", "bg-black w-full min-h-85 max-h-200 h-[10svh] fixed top-0 left-0 sm:hidden transition-transform ease-out duration-700 z-30")} />
             <section
-                className={clsx(!sideBarOpen && "translate-x-full", "w-full sm:w-1/2 mdlg:w-1/3 h-full px-10 bg-black transition-transform ease-out duration-700 pt-[10vh] sm:pt-0 relative z-20 overflow-y-auto overflow-x-hidden")}
+                className={clsx(!sideBarOpen && "translate-x-full", "w-full sm:w-1/2 mdlg:w-1/3 h-full px-10 bg-black transition-transform ease-out duration-700 pt-[10svh] sm:pt-0 relative z-20 overflow-y-auto")}
                 onClick={(e) => e.stopPropagation()}>
                 <button
                     className="absolute top-0 right-0 hidden p-10 sm:block"
@@ -31,7 +31,7 @@ export const SideBar = ({ sideBarOpen, setSideBarOpen }: SideBarProps) => {
                         alt="plus"
                         width={11}
                         height={11}
-                        className="rotate-45"/>
+                        className="rotate-45 w-15 h-auto m-5"/>
                 </button>
                 <div className="grid gap-48 py-24 mt-0 sm:py-48 sm:mt-36">
                     <div className="flex flex-col order-1 gap-24 uppercase sm:order-3">

@@ -4,13 +4,13 @@
 
 :root {
   --foreground: #ffffff;
-  --background: #121212;
+  --background: #111111;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground: #ffffff;
-    --background: #121212;
+    --background: #111111;
   }
 }
 
@@ -21,7 +21,7 @@ body {
 }
 
 *::selection{
-  background: #a10000;
+  background: #b41424;
 }
 
 html.lenis, html.lenis body {
@@ -39,3 +39,14 @@ html.lenis, html.lenis body {
 .lenis.lenis-stopped {
   overflow: hidden;
 }
+
+@layer base {
+  .header{
+    @apply 
+    h-[10svh] 
+    mdlg:h-[15svh] 
+    min-h-85 
+    max-h-200
+  }
+}
+/* don't forget 10svh in Sidebar file and 85vh in imagetext diptych */
