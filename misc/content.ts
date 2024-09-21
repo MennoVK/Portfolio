@@ -10,8 +10,8 @@ export const projects = [
         aspects: "dev",
         year: 2023, 
         images: [
-            {file: "todo-mobile.png", alt: "testalt"},
-            {file: "todo-desktop.png", alt: "testalt"},
+            {file: "1project1.png", alt: "testalt"},
+            {file: "1project2.png", alt: "testalt"},
         ],
         link: "https://todoapp-b51e4.web.app/"
     },
