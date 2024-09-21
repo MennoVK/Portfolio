@@ -27,7 +27,7 @@ module.exports = {
     theme: {
         colors: {
             current: "currentColor",
-            black: "#121212",
+            black: "#111111",
             grey: "#C1B8B8",
             "tundora-grey": "#4B4A4A",
             white: "#ffffff",
@@ -54,7 +54,10 @@ module.exports = {
                 }
             },
             screens: {
-                "mdlg": "840px",
+                "mdlg": "893px",
+            },
+            height: {
+                
             }
         },
     },
