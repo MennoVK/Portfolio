@@ -20,7 +20,14 @@ export const Footer = () => {
                             href={social.url}>{social.platform}</CustomLink>
                         
                     ))}
-                    <p className="my-48 text-white/50 text-12 lg:my-60">© Menno Veerkamp {currentYear}</p>
+                    <p className="mt-48 text-white/50 text-12 lg:mt-60">© Menno Veerkamp {currentYear}</p>
+                    <p className="mb-48 text-white/50 text-12 lg:mb-60">Design: 
+                        <CustomLink
+                            href="https://www.instagram.com/experimentalthingz"
+                            target="_blank" 
+                            underline
+                            active>Arthur Bruyere</CustomLink>
+                    </p>
                 </div>
             </div>
             <CustomLink
