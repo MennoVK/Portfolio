@@ -50,7 +50,7 @@ export const projects = [
         year: 2023, 
         images: [
             {file: "todo-mobile.png", alt: "testalt"},
-            {file: "todo-desktop-2.png", alt: "testalt"},
+            {file: "todo-desktop.png", alt: "testalt"},
             {file: "todo-mobile-2.png", alt: "testalt"},
             {file: "todo-mobile-3.png", alt: "testalt"},
         ],
