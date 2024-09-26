@@ -30,6 +30,7 @@ module.exports = {
             black: "#111111",
             grey: "#C1B8B8",
             "tundora-grey": "#4B4A4A",
+            "dark-grey": "#1a1a1a",
             white: "#ffffff",
             red: "#ff0000",
         },
@@ -46,10 +47,10 @@ module.exports = {
             keyframes: {
                 "custom-bounce": {
                     "0%, 100%": {
-                        transform: "translateY(-20%)",
+                        transform: "translateY(-20%) rotate(90deg)",
                     },
                     "50%": {
-                        transform: "translateY(20%)",
+                        transform: "translateY(20%) rotate(90deg)",
                     }
                 }
             },
