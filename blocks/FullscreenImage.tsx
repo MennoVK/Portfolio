@@ -9,13 +9,13 @@ export interface FullscreenImageProps {
 
 export const FullscreenImage = ({images}: FullscreenImageProps) => {
     return (
-        <section className="w-full sm:h-[calc(100vh-20px)]">
+        <section className="lg:h-[calc(100vh-20px)] bg-dark-grey mx-10 sm:mx-20 flex justify-center items-center">
             <Image
                 src={`/projects/${images[1].file}`}
                 alt={images[1].alt}
-                width={1440}
-                height={788}
-                className="object-cover w-full h-full px-10 my-10 sm:px-20" />
+                width={2280}
+                height={1381}
+                className="object-contain h-full max-h-full p-20 sm:p-50" />
         </section>
     )
 }
