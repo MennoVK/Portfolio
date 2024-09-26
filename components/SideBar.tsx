@@ -31,7 +31,7 @@ export const SideBar = ({ sideBarOpen, setSideBarOpen }: SideBarProps) => {
                         alt="plus"
                         width={11}
                         height={11}
-                        className="rotate-45 w-15 h-auto m-5"/>
+                        className="h-auto m-5 rotate-45 w-15"/>
                 </button>
                 <div className="grid gap-48 py-24 mt-0 sm:py-48 sm:mt-36">
                     <div className="flex flex-col order-1 gap-24 uppercase sm:order-3">
@@ -56,9 +56,9 @@ export const SideBar = ({ sideBarOpen, setSideBarOpen }: SideBarProps) => {
                             {experience.map((experience, idx) => (
                                 <div
                                     key={idx}
-                                    className="flex flex-col gap-24">
+                                    className="flex flex-col gap-12">
                                     <h1 className="uppercase text-white/50">Experience {experience.year}</h1>
-                                    <h2 className="uppercase">{experience.work}</h2>
+                                    <h2 className="pt-12 uppercase">{experience.work}</h2>
                                     <p className="text-white/75">{experience.description}</p>
                                 </div>
                             ))}
