@@ -1,4 +1,5 @@
 import {age} from "./time"
+import { ProjectType } from "./types/types"
 
 
 export const bio = `Hi! I'm Menno Veerkamp. \n A ${age} year old frontend developer from The Netherlands.`
@@ -29,7 +30,7 @@ export const email = "Contact@mennoveerkamp.com"
 
 export const projectsTitle = "To practise my skills I've done some personal and school related projects. Below are the most important ones."
 
-export const projects = [
+export const projects: ProjectType[] = [
     {
         title: "Todo app", 
         description: "For a school project I chose to learn VueJS. To prove my knowledge I built this Todo list app and hosted it with firebase.", 
