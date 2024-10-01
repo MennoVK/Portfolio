@@ -30,29 +30,16 @@ export const email = "Contact@mennoveerkamp.com"
 export const projectsTitle = "To practise my skills I've done some personal and school related projects. Below are the most important ones."
 
 export const projects = [
-    // {
-    //     title: "Arthur Bruyere portfolio", 
-    //     description: "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page", 
-    //     aspects: "dev", 
-    //     year: 2024, 
-    //     images: [
-    //         {file: "test.png", alt: "testalt"},
-    //         {file: "2project2.png", alt: "testalt"},
-    //         {file: "2project1.png", alt: "testalt"},
-    //         {file: "2project1.png", alt: "testalt"},
-    //     ],
-    //     link: "https://arthur-bruyere.com",
-    // },
     {
         title: "Todo app", 
         description: "For a school project I chose to learn VueJS. To prove my knowledge I built this Todo list app and hosted it with firebase.", 
         aspects: "dev",
         year: 2023, 
         images: [
-            {file: "todo-mobile.png", alt: "testalt"},
-            {file: "todo-desktop.png", alt: "testalt"},
-            {file: "todo-mobile-2.png", alt: "testalt"},
-            {file: "todo-mobile-3.png", alt: "testalt"},
+            {file: "todo-mobile.webp", alt: "todo app mobile"},
+            {file: "todo-desktop.webp", alt: "todo app desktop"},
+            {file: "todo-mobile-2.webp", alt: "todo app mobile"},
+            {file: "todo-mobile-3.webp", alt: "todo app mobile"},
         ],
         link: "https://todoapp-b51e4.web.app/"
     },
@@ -62,10 +49,10 @@ export const projects = [
         aspects: "dev",
         year: 2022, 
         images: [
-            {file: "stranger-mobile.png", alt: "testalt"},
-            {file: "stranger-desktop.png", alt: "testalt"},
-            {file: "stranger-mobile-2.png", alt: "testalt"},
-            {file: "stranger-mobile-3.png", alt: "testalt"},
+            {file: "stranger-mobile.webp", alt: "stranger things website mobile"},
+            {file: "stranger-desktop.webp", alt: "stranger things website desktop"},
+            {file: "stranger-mobile-2.webp", alt: "stranger things website mobile"},
+            {file: "stranger-mobile-3.webp", alt: "stranger things website mobile"},
         ],
         link: "https://eindwebsite-iwder.web.app/"
     },
