@@ -28,9 +28,4 @@ export const _metadata: Metadata = {
         description,
         images: ["./image.webp"]
     },
-    // icons: {
-    //     icon: ["/favicon.ico", "/favicon-16x16.png", "/favicon-32x32.png"],
-    //     apple: "/apple-touch-icon.png",
-    // },
-    // manifest: "/site.webmanifest",
 }
