@@ -16,6 +16,7 @@ export const SideBar = ({ sideBarOpen, setSideBarOpen }: SideBarProps) => {
     return (
         <div
             role="dialog"
+            aria-label="Sidebar"
             className={clsx(sideBarOpen && "bg-black/50 pointer-events-auto", "pointer-events-none fixed top-0 left-0 flex justify-end w-full h-dvh sm:z-50 z-10")}
             onClick={() => {setSideBarOpen(false)}}
             data-lenis-prevent
