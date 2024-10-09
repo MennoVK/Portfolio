@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { FullscreenImage } from "@/blocks/FullscreenImage";
@@ -41,4 +42,10 @@ export default function Project({ params }: PageProps) {
             <Footer />
         </>
     )
+}
+
+export const metadata: Metadata = {
+    openGraph: {
+        type: "article",
+    },
 }
