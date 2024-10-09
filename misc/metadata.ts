@@ -20,13 +20,13 @@ export const _metadata: Metadata = {
         },
         description,
         url: baseUrl,
-        type: "website"
-        // images: [""]
+        type: "website",
+        images: ["./image.webp"]
     },
     twitter: {
         title: title,
         description,
-        // images: [""]
+        images: ["./image.webp"]
     },
     // icons: {
     //     icon: ["/favicon.ico", "/favicon-16x16.png", "/favicon-32x32.png"],
