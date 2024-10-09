@@ -52,7 +52,7 @@ export const ImageProjectsDiptych = () => {
                     {projects.map((project, idx) => (
                         <CustomLink
                             key={idx}
-                            className={clsx("flex justify-between w-full border-b border-tundora-grey hover:border-b-grey", idx === 0 && "border-t")}
+                            className={clsx("flex justify-between items-center w-full border-b border-tundora-grey hover:border-b-grey", idx === 0 && "border-t")}
                             href={`/projects/${(project.title).replaceAll(" ", "-")}`}
                             onMouseEnter={() => setActiveProject(idx)}
                             onMouseLeave={() => setActiveProject(null)}
