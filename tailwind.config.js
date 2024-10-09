@@ -4,7 +4,7 @@ const spacing = new Array(450).fill(null).reduce((result, item, i) => {
 }, {})
 
 const SIZES = [
-    12, 14, 20, 25, 28, 30, 36, 50, 60, 65, 66, 90
+    12, 14, 20, 25, 28, 30, 36, 50, 60, 90
 ];
 
 const max = (px) => {
@@ -32,7 +32,6 @@ module.exports = {
             "tundora-grey": "#4B4A4A",
             "dark-grey": "#1a1a1a",
             white: "#ffffff",
-            red: "#ff0000",
         },
         borderRadius: {
             md: "25px",
