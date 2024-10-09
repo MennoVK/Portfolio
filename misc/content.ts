@@ -5,21 +5,21 @@ import { ProjectType } from "./types/types"
 export const bio = `Hi! I'm Menno Veerkamp. \n A ${age} year old frontend developer from The Netherlands.`
 
 export const skills = [
-    "html",
-    "(s)css",
-    "Javascript",
+    "HTML",
+    "(S)CSS",
+    "JavaScript",
     "React",
-    "Nextjs",
+    "Next.js",
     "Vue",
     "Svelte",
-    "TailwindCSS",
+    "Tailwind CSS",
     "Git",
 ]
 
 export const experience = [
-    {work: "Internship frontend development - Numbered studio", year: "2023-24", description: "During my internship at Numbered I learned to work in a team on projects for big clients. This included working with modern web development techniques and focussing on performance, accessibility and SEO."},
-    {work: "student assistent - Hogeschool Leiden", year: "2022-23", description: "As a student assistent my job was to assist teachers in helping first year students with their work. I was also available to share my personal school experiences and helped setting up learning environments."},
-]
+    {work: "Internship Frontend Development - Numbered Studio", year: "2023-24", description: "During my internship at Numbered I learned to work in a team on projects for big clients. This included working with modern web development techniques and focusing on performance, accessibility and SEO."},
+    {work: "Student Assistant - Hogeschool Leiden", year: "2022-23", description: "As a student assistant my job was to assist teachers in helping first year students with their work. I was also available to share my personal school experiences and helped setting up learning environments."},
+]   
 
 export const socials = [
     {platform: "LinkedIn", url: "https://www.linkedin.com/in/menno-veerkamp-3205b0258/"},
@@ -28,13 +28,13 @@ export const socials = [
 
 export const email = "Contact@mennoveerkamp.com"
 
-export const projectsTitle = "To practise my skills I've done some personal and school related projects. Below are the most important ones."
+export const projectsTitle = "To practice my skills I've done some personal and school related projects. Below are the most important ones."
 
 export const projects: ProjectType[] = [
     {
-        title: "Todo app", 
+        title: "Todo App", 
         description: "For a school project I chose to learn VueJS. To prove my knowledge I built this Todo list app and hosted it with firebase.", 
-        aspects: "dev",
+        aspects: "dev, design",
         year: 2023, 
         images: [
             {file: "todo-mobile.webp", alt: "todo app mobile"},
@@ -45,9 +45,9 @@ export const projects: ProjectType[] = [
         link: "https://todoapp-b51e4.web.app/"
     },
     {
-        title: "Stranger things practise website", 
-        description: "For a school project i built a website in Stranger things theme with HTML, CSS and Javascript.", 
-        aspects: "dev",
+        title: "Stranger Things Practice Website", 
+        description: "For a first year school project, I built a website in Stranger things theme with HTML, CSS and Javascript.", 
+        aspects: "dev, design",
         year: 2022, 
         images: [
             {file: "stranger-mobile.webp", alt: "stranger things website mobile"},
@@ -59,4 +59,4 @@ export const projects: ProjectType[] = [
     },
 ]
 
-export const error = {title: "404 error", link: "Return to home"}
+export const error = {title: "404 error", link: "Return to Home"}
