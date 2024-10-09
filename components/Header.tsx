@@ -60,6 +60,7 @@ export const Header = () => {
                     href="/"
                     onClick={() => setSideBarOpen(false)}>Menno Veerkamp</CustomLink>
                 <button
+                    aria-label="open sidebar"
                     onClick={() => {setSideBarOpen(!sideBarOpen)}}
                     className={clsx(button({rounded: "br"}), "uppercase delay-100 motion-reduce:delay-0 w-1/6 mdlg:w-auto", !isVisible && "mdlg:-translate-y-[150%]", !sideBarOpen && !isVisible && "-translate-y-[150%]")}>
                     <span className="hidden mdlg:inline-block">About me</span>
