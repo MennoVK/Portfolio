@@ -8,8 +8,8 @@ export const Hero = () => {
     return (
         <section className="w-full h-svh">
             <div className="absolute w-full h-full p-10 sm:w-3/4 lg:max-w-[1400px] sm:p-20 z-[5] motion-reduce:pointer-events-none">
-                <h1 className="relative -translate-y-1/2 text-28 sm:text-50 top-1/2">{bio}</h1>
-                <p className="absolute uppercase bottom-20 text-12 lg:text-14 motion-reduce:bottom-100">
+                <h1 className="relative -translate-y-1/2 text-28 sm:text-50 top-1/2 pointer-events-auto">{bio}</h1>
+                <p className="absolute uppercase bottom-20 text-12 lg:text-14 motion-reduce:bottom-100 pointer-events-auto">
                     Scroll down
                     <Image
                         src="/svgs/arrow-right.svg"
