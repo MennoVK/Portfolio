@@ -19,7 +19,7 @@ export const ImageTextDiptych = ({title, description, aspects, year, images, lin
             <div className="flex flex-col justify-between flex-grow basis-0 w-full sm:max-w-[50%]">
                 <CustomLink
                     href="/"
-                    className="hidden uppercase text-12 text-white/50 sm:block"
+                    className="hidden uppercase text-12 lg:text-14 text-white/50 sm:block"
                     underline>Back to home</CustomLink>
                 <div className="flex flex-col gap-24 py-48 sm:py-24 lg:w-3/4">
                     {title && 
@@ -29,10 +29,10 @@ export const ImageTextDiptych = ({title, description, aspects, year, images, lin
                         <tbody>
                             <tr className="w-full border-y border-tundora-grey">
                                 {aspects &&
-                                    <td className="py-20 text-left text-12">{aspects}</td>
+                                    <td className="py-20 text-left text-12 lg:text-14">{aspects}</td>
                                 }
                                 {year &&
-                                        <td className="py-20 text-right text-12">{year}</td>
+                                        <td className="py-20 text-right text-12 lg:text-14">{year}</td>
                                 }
                             </tr>
                         </tbody>

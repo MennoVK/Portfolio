@@ -14,16 +14,16 @@ export const ImageDiptych = ({images}: ImageDiptychProps) => {
                 <Image
                     src={`/projects/${images[2].file}`}
                     alt={images[2].alt}
-                    width={695}
-                    height={753}
+                    width={567}
+                    height={1212}
                     className="object-contain w-full sm:h-[calc(100vh-20px)] aspect-square sm:aspect-auto p-10 sm:p-50" />
             </div>
             <div className="flex-grow basis-0 bg-dark-grey">
                 <Image
                     src={`/projects/${images[3].file}`}
                     alt={images[3].alt}
-                    width={695}
-                    height={753}
+                    width={567}
+                    height={1212}
                     className="object-contain w-full sm:h-[calc(100vh-20px)] aspect-square sm:aspect-auto p-10 sm:p-50" />
             </div>
         </section>

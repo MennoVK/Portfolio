@@ -9,19 +9,19 @@ export const Footer = () => {
     return (
         <footer className="flex flex-col p-10 overflow-hidden uppercase sm:p-20">
             <div className="flex justify-between">
-                <p className="text-12 text-white/50">Contact me</p>
+                <p className="text-12 lg:text-14 text-white/50">Contact me</p>
                 <div className="flex flex-col items-end gap-12">
                     {socials.map((social, idx) => (
                         <CustomLink
                             key={idx}
                             underline
                             target="_blank"
-                            className="text-12"
+                            className="text-12 lg:text-14"
                             href={social.url}>{social.platform}</CustomLink>
                         
                     ))}
-                    <p className="mt-48 text-white/50 text-12 lg:mt-60">© Menno Veerkamp {currentYear}</p>
-                    <p className="mb-48 text-white/50 text-12 lg:mb-60">Design: 
+                    <p className="mt-48 text-white/50 text-12 lg:text-14 lg:mt-60">© Menno Veerkamp {currentYear}</p>
+                    <p className="mb-48 text-white/50 text-12 lg:text-14 lg:mb-60">Design:&nbsp;
                         <CustomLink
                             href="https://www.instagram.com/experimentalthingz"
                             target="_blank" 
