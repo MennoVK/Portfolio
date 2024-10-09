@@ -1,22 +1,34 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import "./globals.css"
 
-const inter = Inter({ subsets: ['latin'] })
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { VercelToolbar } from "@vercel/toolbar/next";
+import localFont from "next/font/local"
 
-export const metadata: Metadata = {
-  title: "Coming soon",
-  description: "Coming soon page for Menno Veerkamp's portfolio",
-}
+import { Header } from "@/components/Header"
+import { _metadata } from "@/misc/metadata";
+
+
+const manrope = localFont({ src: "../public/fonts/Manrope-Regular.woff2" })
 
 export default function RootLayout({
-  children,
+    children,
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  )
+    const shouldInjectToolbar = process.env.NODE_ENV === "development";
+
+    return (
+        <html lang="en">
+            <body className={manrope.className}>
+                <main>
+                    <Header />
+                    {children}
+                    <SpeedInsights />
+                    {shouldInjectToolbar && <VercelToolbar />}
+                </main>
+            </body>
+        </html>
+    )
 }
+
+export const metadata = _metadata
