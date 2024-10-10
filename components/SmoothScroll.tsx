@@ -8,11 +8,7 @@ import { useLayoutStore } from "@/misc/stores/store";
 import usePrefersReducedMotion from "@/misc/usePrefersReducedMotion";
 
 
-export interface SmoothScrollProps {
-    stop?: boolean;
-}
-
-export const SmoothScroll = ({stop}: SmoothScrollProps) => {
+export const SmoothScroll = () => {
     const lenisRef = useRef<Lenis | null>(null);
     const pathname = usePathname();
     const { sideBarOpen } = useLayoutStore();
@@ -44,7 +40,7 @@ export const SmoothScroll = ({stop}: SmoothScrollProps) => {
         return () => {
             lenis.destroy();
         };
-    },[stop, sideBarOpen, prefersReducedMotion]);
+    },[sideBarOpen, prefersReducedMotion]);
 
     return <></>;
 }
