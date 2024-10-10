@@ -4,6 +4,7 @@ import Lenis from "@studio-freight/lenis";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 
+import { useLayoutStore } from "@/misc/stores/store";
 import usePrefersReducedMotion from "@/misc/usePrefersReducedMotion";
 
 
@@ -14,7 +15,7 @@ export interface SmoothScrollProps {
 export const SmoothScroll = ({stop}: SmoothScrollProps) => {
     const lenisRef = useRef<Lenis | null>(null);
     const pathname = usePathname();
-
+    const { sideBarOpen } = useLayoutStore();
     const prefersReducedMotion = usePrefersReducedMotion();
     
     useEffect(() => {
@@ -25,7 +26,7 @@ export const SmoothScroll = ({stop}: SmoothScrollProps) => {
         const lenis = new Lenis();
         lenisRef.current = lenis
 
-        if(stop){
+        if(sideBarOpen){
             lenis.stop()
         }
 
@@ -43,7 +44,7 @@ export const SmoothScroll = ({stop}: SmoothScrollProps) => {
         return () => {
             lenis.destroy();
         };
-    },[stop, prefersReducedMotion]);
+    },[stop, sideBarOpen, prefersReducedMotion]);
 
     return <></>;
 }
