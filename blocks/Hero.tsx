@@ -1,19 +1,37 @@
-import Image from "next/image"
+"use client"
 
-import { CustomLink } from "@/components/CustomLink"
+import Image from "next/image"
+import { useEffect, useRef } from "react"
+
 import { Video } from "@/components/Video"
 import { bio } from "@/misc/content"
 
 
 export const Hero = () => {
+    const videoRef = useRef<HTMLVideoElement | null>(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            let offset = window.scrollY;
+            if (videoRef.current) {
+                videoRef.current.style.transform = "translateY(" + offset * 0.3 + "px)"
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
-        <section className="w-full h-svh">
+        <section className="w-full overflow-hidden h-svh">
             <div className="absolute w-full h-full p-10 sm:w-3/4 lg:max-w-[1400px] sm:p-20 z-[5] motion-reduce:pointer-events-none">
                 <h1 className="relative -translate-y-1/2 pointer-events-auto text-28 sm:text-50 top-1/2">{bio}</h1>
-                <CustomLink
-                    href="#projects"
+                <p
                     className="absolute uppercase pointer-events-auto bottom-20 text-12 lg:text-14 motion-reduce:bottom-100">
-                    Scroll down
+                    Projects
                     <Image
                         src="/svgs/arrow-right.svg"
                         alt="Scroll down arrow"
@@ -21,9 +39,10 @@ export const Hero = () => {
                         height={15}
                         priority
                         className="inline mx-10 animate-custom-bounce motion-reduce:animate-none motion-reduce:rotate-90"/>
-                </CustomLink>
+                </p>
             </div>
             <Video
+                ref={videoRef}
                 sources={["./videos/heroVideo-h264.mp4", "./videos/heroVideo-h265.mp4"]}
                 width={3840}
                 height={2160}
