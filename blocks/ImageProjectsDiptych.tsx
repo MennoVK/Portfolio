@@ -12,9 +12,8 @@ import { isMobile } from "@/misc/responsiveness"
 
 export const ImageProjectsDiptych = () => {
     const [activeProject, setActiveProject] = useState<number | null>(null)
-    const [isClient, setIsClient] = useState(false) // Track if we are on the client
+    const [isClient, setIsClient] = useState(false)
 
-    // This useEffect runs only on the client side
     useEffect(() => {
         setIsClient(true)
     }, [])
@@ -22,7 +21,9 @@ export const ImageProjectsDiptych = () => {
     let projectActive = activeProject != null && !isMobile() 
 
     return (
-        <section className="relative flex w-full h-full gap-10 sm:py-32 sm:h-screen sm:px-20 sm:my-0 my-120">
+        <section
+            className="relative flex w-full h-full gap-10 sm:py-32 sm:h-screen sm:px-20 sm:my-0 my-120"
+            id="projects">
             <div className="relative items-center justify-center w-full rounded-tl-lg rounded-br-lg sm:flex sm:h-full sm:w-3/5 sm:border border-tundora-grey sm:p-25 lg:p-95">
                 {isClient && !isMobile() &&
                     <Image

@@ -1,24 +1,23 @@
+"use client"
+
 import clsx from "clsx";
 import Image from "next/image";
-import { Dispatch, SetStateAction } from "react";
 
 import { email,experience, skills } from "@/misc/content"
+import { useLayoutStore } from "@/misc/stores/store";
 
 import { CustomLink } from "./CustomLink";
 
 
-export interface SideBarProps {
-    sideBarOpen: boolean;
-    setSideBarOpen: Dispatch<SetStateAction<boolean>>;
-}
+export const SideBar = () => {
+    const { sideBarOpen, setSideBarOpen } = useLayoutStore();
 
-export const SideBar = ({ sideBarOpen, setSideBarOpen }: SideBarProps) => {
     return (
         <div
             role="dialog"
             aria-label="Sidebar"
             className={clsx(sideBarOpen && "bg-black/50 pointer-events-auto", "pointer-events-none fixed top-0 left-0 flex justify-end w-full h-dvh sm:z-50 z-10")}
-            onClick={() => {setSideBarOpen(false)}}
+            onClick={() => setSideBarOpen(false)}
             data-lenis-prevent
         >
             <div className={clsx(!sideBarOpen && "translate-x-full", "bg-black w-full min-h-85 max-h-200 h-[10svh] fixed top-0 left-0 sm:hidden transition-transform ease-out motion-reduce:duration-0 duration-700 z-30")} />
@@ -27,7 +26,7 @@ export const SideBar = ({ sideBarOpen, setSideBarOpen }: SideBarProps) => {
                 onClick={(e) => e.stopPropagation()}>
                 <button
                     className="absolute top-0 right-0 hidden p-10 sm:block"
-                    onClick={() => {setSideBarOpen(false)}}>
+                    onClick={() => setSideBarOpen(false)}>
                     <Image
                         src="/svgs/plus.svg"
                         alt="exit"
