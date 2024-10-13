@@ -2,32 +2,28 @@
 
 import Lenis from "@studio-freight/lenis";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
-import { useLayoutStore } from "@/misc/stores/store";
+import { useLayoutStore,useLenisStore } from "@/misc/stores/store";
 import usePrefersReducedMotion from "@/misc/usePrefersReducedMotion";
 
 
 export const SmoothScroll = () => {
-    const lenisRef = useRef<Lenis | null>(null);
     const pathname = usePathname();
     const { sideBarOpen } = useLayoutStore();
     const prefersReducedMotion = usePrefersReducedMotion();
-    
-    useEffect(() => {
-        if (lenisRef .current) lenisRef.current?.scrollTo(0, { immediate: true });
-    }, [pathname]);
+    const setLenis = useLenisStore((state) => state.setLenis);
 
     useEffect(() => {
         const lenis = new Lenis();
-        lenisRef.current = lenis
+        setLenis(lenis);
 
-        if(sideBarOpen){
-            lenis.stop()
+        if (sideBarOpen) {
+            lenis.stop();
         }
 
-        if(prefersReducedMotion){
-            lenis.destroy()
+        if (prefersReducedMotion) {
+            lenis.destroy();
         }
 
         function raf(time: number) {
@@ -40,7 +36,12 @@ export const SmoothScroll = () => {
         return () => {
             lenis.destroy();
         };
-    },[sideBarOpen, prefersReducedMotion]);
+    }, [sideBarOpen, prefersReducedMotion, setLenis]);
+
+    useEffect(() => {
+        const lenis = useLenisStore.getState().lenis;
+        if (lenis) lenis.scrollTo(0, { immediate: true });
+    }, [pathname]);
 
     return <></>;
-}
+};
