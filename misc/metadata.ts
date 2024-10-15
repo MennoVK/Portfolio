@@ -1,8 +1,10 @@
 import { Metadata } from "next";
 
+import {age} from "./time"
+
 
 const title = "Menno Veerkamp"
-const description = "Menno Veerkamp portfolio page"
+const description = `Hi! I'm Menno Veerkamp. \n A ${age} year old frontend developer from The Netherlands.`
 export const baseUrl = "https://mennoveerkamp.com"
 
 export const _metadata: Metadata = {
