@@ -1,5 +1,6 @@
 import "./globals.css"
 
+import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { VercelToolbar } from "@vercel/toolbar/next";
 import localFont from "next/font/local"
@@ -15,7 +16,7 @@ const manrope = localFont({ src: "../public/fonts/Manrope-Regular.woff2" })
 export default function RootLayout({
     children,
 }: {
-  children: React.ReactNode
+    children: React.ReactNode
 }) {
     const shouldInjectToolbar = process.env.NODE_ENV === "development";
 
@@ -28,6 +29,7 @@ export default function RootLayout({
                     <SideBar />
                     {children}
                     <SpeedInsights />
+                    <Analytics />
                     {shouldInjectToolbar && <VercelToolbar />}
                 </main>
             </body>
