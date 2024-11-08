@@ -23,8 +23,8 @@ export default function NotFound() {
             </div>
             <Video
                 sources={["./videos/heroVideo-h264.mp4", "./videos/heroVideo-h265.mp4"]}
-                width={3840}
-                height={2160}
+                width={1920}
+                height={1080}
                 autoplay
                 loop
                 muted
