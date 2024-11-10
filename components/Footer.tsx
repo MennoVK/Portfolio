@@ -32,7 +32,7 @@ export const Footer = () => {
             </div>
             <CustomLink
                 target="_blank"
-                className="text-[5.7vw] sm:text-[5.75vw] md:text-[5.8vw] lg:text-[5.875vw] xl:text-[5.9vw] 2xl:text-[5.95vw] text-center leading-tight sm:leading-none flex justify-between w-full"
+                className="text-[5.5vw] sm:text-[5.6vw] md:text-[5.7vw] lg:text-[5.75vw] xl:text-[5.8vw] 2xl:text-[5.9vw] text-center leading-tight sm:leading-none flex justify-between w-full"
                 href={`mailto:${email}`}
                 underline
                 active
