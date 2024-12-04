@@ -14,7 +14,6 @@ export const skills = [
     "Vue",
     "Svelte",
     "Tailwind CSS",
-    "Git",
 ]
 
 export const experience = [
