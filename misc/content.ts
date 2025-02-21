@@ -19,6 +19,7 @@ export const skills = [
 export const experience = [
     {work: "Internship Frontend Development - Numbered Studio", year: "2023-24", description: "During my internship at Numbered I learned to work in a team on projects for big clients. This included working with modern web development techniques and focusing on performance, accessibility and SEO."},
     {work: "Student Assistant - Hogeschool Leiden", year: "2022-23", description: "As a student assistant my job was to assist teachers in helping first year students with their work. I was also available to share my personal school experiences and helped setting up learning environments."},
+    {work: "Internship UI/UX + Frontend Development - MyLaps", year: "2025", description: "Doing research on improving the user experience of MyLaps timing & scoring software"},
 ]   
 
 export const socials = [
