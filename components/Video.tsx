@@ -24,10 +24,10 @@ export const Video = forwardRef<HTMLVideoElement, VideoProps>(
         {
             sources,
             controls = false,
-            muted,
-            loop,
-            autoplay,
-            playsInline,
+            muted = true,
+            loop = true,
+            autoplay = true,
+            playsInline = true,
             width,
             height,
             preload,
@@ -68,5 +68,5 @@ export const Video = forwardRef<HTMLVideoElement, VideoProps>(
     }
 );
 
-// Provide displayName for better debugging
+
 Video.displayName = "Video";
