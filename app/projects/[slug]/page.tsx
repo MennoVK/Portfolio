@@ -8,14 +8,19 @@ import { Footer } from "@/components/Footer";
 import { projects } from "@/misc/content";
 
 
-export interface PageProps {
-    params: { 
-        slug: string 
-    };
+export async function generateStaticParams() {
+    const slugs = projects.map((project) => 
+        project.title.toLowerCase().replace(/\s+/g, "-")
+    );
+
+    return slugs.map((slug) => ({
+        slug
+    }));
 }
 
-export default function Project({ params }: PageProps) {
-    const props = projects.find(project => project.title === (params.slug).replaceAll("-", " "));
+export default async function Project({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    const props = projects.find(project => project.title === (slug).replaceAll("-", " "));
 
     if (!props) {
         notFound();

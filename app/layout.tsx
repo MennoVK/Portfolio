@@ -2,7 +2,6 @@ import "./globals.css"
 
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { VercelToolbar } from "@vercel/toolbar/next";
 import localFont from "next/font/local"
 
 import { Header } from "@/components/Header"
@@ -18,8 +17,6 @@ export default function RootLayout({
 }: {
     children: React.ReactNode
 }) {
-    const shouldInjectToolbar = process.env.NODE_ENV === "development";
-
     return (
         <html lang="en">
             <body className={manrope.className}>
@@ -30,11 +27,10 @@ export default function RootLayout({
                     {children}
                     <SpeedInsights />
                     <Analytics />
-                    {shouldInjectToolbar && <VercelToolbar />}
                 </main>
             </body>
         </html>
     )
 }
 
-export const metadata = _metadata
+export const metadata = _metadata;
