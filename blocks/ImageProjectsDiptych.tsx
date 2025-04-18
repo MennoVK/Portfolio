@@ -28,10 +28,13 @@ export const ImageProjectsDiptych = () => {
                 {isClient && !isMobile() &&
                     <Image
                         src={`/projects/${projects[activeProject ? activeProject : 0].images[0].file}`}
-                        alt={`/projects/${projects[activeProject ? activeProject : 0].images[0].alt}`}
+                        alt={projects[activeProject ? activeProject : 0].images[0].alt}
                         width={567}
                         height={1212}
-                        className={clsx(!projectActive && "hidden","!relative w-full max-h-full object-contain")}
+                        className={clsx(
+                            "absolute left-0 w-full h-3/4 object-contain",
+                            projectActive ? "opacity-100 z-10" : "opacity-0 pointer-events-none z-0"
+                        )}
                     />
                 }
                 <Video 
