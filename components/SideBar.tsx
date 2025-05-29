@@ -36,7 +36,7 @@ export const SideBar = () => {
                 </button>
                 <div className="grid gap-48 py-24 mt-0 sm:py-48 sm:mt-36">
                     <div className="flex flex-col order-1 gap-24 uppercase sm:order-3">
-                        <h1 className=" text-white/50">Contact me</h1>
+                        <h2 className=" text-white/50">Contact me</h2>
                         <CustomLink
                             href={`mailto:${email}`}
                             className="flex justify-between"
@@ -58,8 +58,8 @@ export const SideBar = () => {
                                 <div
                                     key={idx}
                                     className="flex flex-col gap-12">
-                                    <h1 className="uppercase text-white/50">Experience {experience.year}</h1>
-                                    <h2 className="pt-12 uppercase">{experience.work}</h2>
+                                    <h2 className="uppercase text-white/50">Experience {experience.year}</h2>
+                                    <h3 className="pt-12 uppercase">{experience.work}</h3>
                                     <p className="text-white/75">{experience.description}</p>
                                 </div>
                             ))}
@@ -67,7 +67,7 @@ export const SideBar = () => {
                     </div>
 
                     <div className="flex flex-col order-3 gap-24 uppercase sm:order-2">
-                        <h1 className="text-white/50">Skills</h1>
+                        <h2 className="text-white/50">Skills</h2>
                         <div className="flex flex-wrap gap-12">
                             {skills.map((skill, idx) => (
                                 <p key={idx}>{skill}</p>
