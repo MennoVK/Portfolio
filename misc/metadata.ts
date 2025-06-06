@@ -4,7 +4,8 @@ import {age} from "./time"
 
 
 const title = "Menno Veerkamp"
-const description = `Hi! I'm Menno Veerkamp. \n A ${age} year old frontend developer from The Netherlands.`
+const description = `Menno Veerkamp is a ${age}-year-old frontend developer from The Netherlands, specializing in performant and accesible web-experiences.`
+
 export const baseUrl = "https://mennoveerkamp.com"
 
 export const _metadata: Metadata = {
